@@ -14,7 +14,7 @@
 
    - Kullanıcılara rehberlik edecek sağlık, beslenme ve spor ile ilgili bilgi yazılarının hazırlanması.
 
-4. **Kart ile Ödeme**
+4. **Ürünlerin Favorilere eklenmesi**
 
    - Kullanıcıların sistem üzerinden kart ile güvenli ödeme yapabilmeleri için ödeme altyapısının güncellenmesi ve kontrol edilmesi.
 
