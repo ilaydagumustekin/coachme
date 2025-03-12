@@ -16,7 +16,7 @@
 
 4. **Ürünlerin Favorilere eklenmesi**
 
-   - Kullanıcıların sistem üzerinden kart ile güvenli ödeme yapabilmeleri için ödeme altyapısının güncellenmesi ve kontrol edilmesi.
+   - Kullanıcıların sistem üzerinden begendikleri ürünleri favorilere eklerler.
 
 5. **Çıkış Yap**
    - Kullanıcıların güvenli bir şekilde sistemden çıkış yapabilmeleri için gerekli geliştirmelerin yapılması.
