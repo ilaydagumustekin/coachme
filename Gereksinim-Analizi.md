@@ -1,24 +1,27 @@
 # **GEREKSİNİMLER**
 
-**1.Kayıt Alma** -(İlayda Gümüştekin)
-**2.Giriş Yap** -(İlayda Gümüştekin)
-**3.Vücut Kütle Hesaplama (Güncelleme)** – (Başak Karataş)
-**4.Beden Ölçüsü (Güncelleme)** -(İlayda Gümüştekin)
-**5.Hastalık Geçmişi Formu (Güncelleme)** – (Başak Karataş)
-**6.Koç Seçimi (Güncelleme)** – (Talha Pakdil)
-**7.Diyet Program Seçimi (Güncelleme)** – (Başak Karataş)
-**8.Spor Program Seçimi (Güncelleme)** – (İlayda Gümüştekin)
-**9.Antrenman ve Yemek Takibi (Güncelleme)** – (Talha Pakdil)
-**10.Bilgi Yazıları** – (Talha Pakdil)
-**11.Ürünleri Listeleme** – (Başak Karataş)
-**12.Ürün Sepete Ekleme** – (İlayda Gümüştekin)
-**13.Sepetten Ürün Çıkarma** - (Başak Karataş)
-**14.Ürünlerin Favorilere eklenmesi** – (Talha Pakdil)
-**15.Sipariş Ver** – (İlayda Gümüştekin)
-**16.Çıkış yap** - (Talha Pakdil)
+**1.Giriş Yap** -
+**2.Kayıt Ol** -
+**3.Ekibimiz(Güncelleme)** – ?????
+**4.Ekibimize Katıl** -
+**5.Program (Güncelleme)** – 
+**6.Sepete Ekle**
+**7.Sepetten Sil** – 
+**8.Ödeme Yap** – 
+**9.Yorum Yap** – 
+**10.Çıkış Yap** – 
+**11.Vücut Kitle İndeksi Hesapla** – 
+**12.Beden Ölçüsü** – 
+**13.Hastalık Geçmişi** - 
+**14.Koç Ekle** – 
+**15.Koç Sil** – 
+**16.Fiyat Güncelle** -
+**17.Program Yükle** -
+**18.Program Sil** -
+**19.Program Güncelle** -
 
 # **GEREKSİNİM DAĞILIMLARI**
 
 1. İlayda Gümüştekin'in Gereksinimleri
 2. Başak Karataş'ın Gereksinimleri
-3. Talha Pakdil'in Gereksinimleri
+
