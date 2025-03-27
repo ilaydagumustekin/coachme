@@ -1,4 +1,4 @@
-#CoachMe<br>
+# CoachMe<br>
 PROJE TANIMI:<br>
 Sağlıklı yaşam, herkesin hakkı! Ancak, doğru beslenme ve egzersiz programını bulmak çoğu zaman karmaşık ve zorlayıcı olabilir. İşte tam da bu noktada, CoachMe devreye giriyor!Bu platform, kullanıcıların vücut kitle indeksi değerlerini analiz ederek onlara en uygun beslenme ve spor programlarını sunar. Kişiye özel önerilerimizle sağlıklı yaşam yolculuğunuzu daha bilinçli ve sürdürülebilir hale getiriyoruz.
 Ayrıca, online bireysel koçluk desteği ile kullanıcılarımızın ihtiyaçlarına özel rehberlik sunarak, onların hedeflerine ulaşmasını sağlıyoruz. Hedefiniz ister kilo vermek, ister kas yapmak ya da sadece sağlıklı bir yaşam tarzı oluşturmak olsun, CoachMe her adımda yanınızda!
