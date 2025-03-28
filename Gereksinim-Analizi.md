@@ -23,6 +23,6 @@
 
 # **GEREKSİNİM DAĞILIMLARI**
 
-[1. İlayda Gümüştekin'in Gereksinimleri](https://github.com/ilaydagumustekin/coachme/blob/main/%C4%B0layda-G%C3%BCm%C3%BC%C5%9Ftekin-Gereksinimler.md)
-2. Başak Karataş'ın Gereksinimleri
+[1. İlayda Gümüştekin'in Gereksinimleri](https://github.com/ilaydagumustekin/coachme/blob/main/%C4%B0layda-G%C3%BCm%C3%BC%C5%9Ftekin-Gereksinimler.md)  
+[2. Başak Karataş'ın Gereksinimleri](https://github.com/ilaydagumustekin/coachme/blob/main/Ba%C5%9Fak-Karata%C5%9F-gereksinimler.md)
 
