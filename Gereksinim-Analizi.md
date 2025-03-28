@@ -1,25 +1,28 @@
 # **GEREKSİNİMLER**
 
-**1.Kayıt Alma** -(İlayda Gümüştekin)
-**2.Giriş Yap** -(İlayda Gümüştekin)
-**3.Vücut Kütle Hesaplama (Güncelleme)** – (Başak Karataş)
-**4.Beden Ölçüsü (Güncelleme)** -(İlayda Gümüştekin)
-**5.Hastalık Geçmişi Formu (Güncelleme)** –  (Başak Karataş)
-**6.Koç Seçimi (Güncelleme)** – (Talha Pakdil)
-**7.Diyet Program Seçimi (Güncelleme)** – (Başak Karataş)
-**8.Spor Program Seçimi (Güncelleme)** – (İlayda Gümüştekin)
-**9.Antrenman ve Yemek Takibi (Güncelleme)** – (Talha Pakdil)
-**10.Bilgi Yazıları** – (Talha Pakdil)
-**11.Ürünleri Listeleme** – (Başak Karataş)
-**12.Ürün Sepete Ekleme** – (İlayda Gümüştekin)
-**13.Sepetten Ürün Çıkarma** - (Başak Karataş)
-**14.Kart ile Ödeme** – (Talha Pakdil)
-**15.Sipariş Ver** – (İlayda Gümüştekin)
-**16.Çıkış yap** - (Talha Pakdil)
-
-
+**1.Giriş Yap** - İlayda Gümüştekin
+**2.Kayıt Ol** - Başak Karataş
+**3.Ekibimiz** – İlayda Gümüştekin
+**4.Ekibimize Katıl** - Başak Karataş
+**5.Program** – İlayda Gümüştekin
+**6.Program Güncelleme** - İlayda Gümüştekin
+**7.Sepete Ekle** - Başak Karataş
+**8.Sepetten Sil** – Başak Karataş
+**9.Ödeme Yap** – İlayda Gümüştekin
+**10.Yorum Yap** – Başak Karataş
+**11.Çıkış Yap** – İlayda Gümüştekin
+**12.Vücut Kitle İndeksi Hesapla** – Başak Karataş
+**13.Beden Ölçüsü** – İlayda Gümüştekin
+**14.Hastalık Geçmişi** - Başak Karataş
+**15.Eğitmen Ekle** – İlayda Gümüştekin
+**16.Eğitmen Sil** – İlayda Gümüştekin
+**17.Fiyat Güncelle** - Başak Karataş
+**18.Program Yükle** - İlayda Gümüştekin
+**19.Program Sil** - Başak Karataş
+**20.Program Güncelle** - Başak Karataş
 
 # **GEREKSİNİM DAĞILIMLARI**
+
 1. İlayda Gümüştekin'in Gereksinimleri
 2. Başak Karataş'ın Gereksinimleri
-3. Talha Pakdil'in Gereksinimleri
+
