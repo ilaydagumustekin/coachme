@@ -1,13 +1,161 @@
+/* Genel vücut stili */
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f9fafb; /* Hafif gri arka plan */
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Başlık stili */
+h1, h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Sayfa genel düzen */
+div {
+  padding: 20px;
+}
+
+/* Buton stili */
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Sayfa başlığı stili */
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Program kartları için stil */
+.program-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.program-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.program-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Modal stili */
+.draft-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.draft-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.draft-modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.draft-modal-content button {
+  width: 48%;
+  margin: 5px;
+}
+
+.draft-modal-content button:first-of-type {
+  background-color: #28a745;
+}
+
+.draft-modal-content button:first-of-type:hover {
+  background-color: #218838;
+}
+
+.draft-modal-content button:last-of-type {
+  background-color: #dc3545;
+}
+
+.draft-modal-content button:last-of-type:hover {
+  background-color: #c82333;
+}
+
+/* Program detayları stili */
+.program-detail {
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.program-detail h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.program-detail p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* İlerleme çubuğu */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-bar-text {
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  line-height: 20px;
 }
