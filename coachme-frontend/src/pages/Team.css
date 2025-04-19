@@ -1,0 +1,13 @@
+.team-container {
+    padding: 40px;
+    background-color: #f3f4f6;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.trainer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
