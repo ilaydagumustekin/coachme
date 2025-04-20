@@ -1,6 +1,6 @@
 // pages/BMIPage.jsx
 import React from 'react';
-import BMIForm from '../Components/BMIForm';
+import BMIForm from '../component/BMIForm';
 
 const BMIPage = () => {
   return (

@@ -1,4 +1,3 @@
-// AuthContext.jsx
 import React, { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
@@ -6,14 +5,21 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = (username) => setUser({ username });
-  const logout = () => setUser(null);
+  // Kullanıcıyı giriş yaptığında ayarlama
+  const login = (username, isTrainerStatus = false, isAdminStatus = false) => {
+    setUser({ username, isTrainer: isTrainerStatus, isAdmin: isAdminStatus });
+  };
 
-  // Kullanıcı verisini güncelleyen fonksiyon
+  // Kullanıcıyı çıkış yaptıktan sonra sıfırlama
+  const logout = () => {
+    setUser(null);
+  };
+
+  // Kullanıcı verisini güncelleme fonksiyonu
   const updateUserData = (data) => {
     setUser((prevUser) => ({
       ...prevUser,
-      ...data,  // Yeni verileri mevcut kullanıcının bilgileriyle birleştiriyoruz
+      ...data,  // Yeni verilerle mevcut kullanıcıyı güncelliyoruz
     }));
   };
 
@@ -25,4 +31,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
-

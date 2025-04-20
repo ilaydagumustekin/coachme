@@ -1,6 +1,5 @@
-// Team.jsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // Link'i import ediyoruz
+import { Link } from 'react-router-dom';  // Link'i import ediyoruz
 import TrainerCard from '../component/TrainerCard';  // 'Components' dosyasından TrainerCard'ı import ediyoruz
 import './Team.css';
 
