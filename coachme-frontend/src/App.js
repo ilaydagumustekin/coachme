@@ -1,47 +1,70 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';  // Sepet context'i
-import { AuthProvider } from './context/AuthContext';  // Kullanıcı girişi context'i
-import Team from './pages/Team';  // Ana sayfa: Eğitmen listesi
-import TrainerProfile from './pages/TrainerProfile';  // Eğitmen profili sayfası
-import Cart from './pages/Cart';  // Sepet sayfası
-import AccountPage from './pages/AccountPage'; // Hesabım sayfası
-import MedicalHistoryPage from './pages/MedicalHistoryPage'; // Hastalık geçmişi sayfası
-import AdminProgramPage from './pages/AdminProgramPage'; // Admin program yönetim sayfası
-import Register from './pages/Register';  // Doğru import
-import { Link } from 'react-router-dom';  // Link'i doğru şekilde import edin
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext';
+
+import Team from './pages/Team';
+import TrainerProfile from './pages/TrainerProfile';
+import Cart from './pages/Cart';
+import AccountPage from './pages/AccountPage';
+import MedicalHistoryPage from './pages/MedicalHistoryPage';
+import AdminProgramPage from './pages/AdminProgramPage';
+import Register from './pages/Register';
 import BMIPage from './pages/BMIPage';
 import JoinTeam from './pages/JoinTeam';
-
-
+import MevcutProgram from './component/MevcutProgram';
+import BodyPage from './pages/BodyPage';
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+import AdminDashboard from './pages/AdminDashboard';
+import AddTrainerPages from './pages/AddTrainerPages';
+import TrainerListPage from './pages/TrainerListPage';
+import DeleteTrainerForm from './pages/DeleteTrainerForm';
+import UpdatePricePage from './pages/UpdatePricePage';
+import UploadProgram from './pages/UploadProgram';
+import DeleteProgramPage from './pages/DeleteProgramPage';
+import UpdateProgramPage from './pages/UpdateProgramPage';
 
 const App = () => {
   return (
-    <AuthProvider>  {/* Kullanıcı girişi için context */}
-      <CartProvider>  {/* Sepet için context */}
-      <Router>
+    <AuthProvider>
+      <CartProvider>
+        <Router>
           <nav>
             <ul>
-              <li>
-                <Link to="/register">Kayıt Ol</Link>  {/* Register sayfasına yönlendiren link */}
-              </li>
-              <Link to="/join-team">
-            <button>Ekibimize Katıl</button>  {/* Ana sayfada buton */}
-          </Link>
+              <li><Link to="/login">GİRİŞ YAP</Link></li>
+              <li><Link to="/logout">ÇIKIŞ YAP</Link></li>
+              <li><Link to="/register">Kayıt Ol</Link></li>
+              <li><Link to="/join-team"><button>Ekibimize Katıl</button></Link></li>
+              <li><Link to="/admin">YÖNETİCİ PANELİ</Link></li>
+              
+
+
             </ul>
           </nav>
-        
-          <Routes>
-            <Route path="/" element={<Team />} />  {/* Ana sayfa: Eğitmen listesi */}
-            <Route path="/trainer/:trainerId" element={<TrainerProfile />} />  {/* Eğitmen profili sayfası */}
-            <Route path="/cart" element={<Cart />} />  {/* Sepet sayfası */}
-            <Route path="/account" element={<AccountPage />} />  {/* Hesabım sayfası */}
-            <Route path="/medical-history" element={<MedicalHistoryPage />} />  {/* Hastalık geçmişi sayfası */}
-            <Route path="/admin/programs" element={<AdminProgramPage />} />  {/* Admin program yönetimi */}
-            <Route path="/register" element={<Register />} />  {/* Register sayfası */}
-            <Route path="/bmi" element={<BMIPage />} />  {/* BMI sayfası için route */}
-            <Route path="/join-team" element={<JoinTeam />} />  {/* JoinTeam sayfasını yönlendir */}
 
+          <Routes>
+            <Route path="/" element={<Team />} />
+            <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/account" element={<AccountPage />} />
+            <Route path="/medical-history" element={<MedicalHistoryPage />} />
+            <Route path="/admin/programs" element={<AdminProgramPage />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/bmi" element={<BMIPage />} />
+            <Route path="/join-team" element={<JoinTeam />} />
+            <Route path="/mevcut-program" element={<MevcutProgram />} />
+            <Route path="/body-measurements" element={<BodyPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/add-trainer" element={<AddTrainerPages />} />
+            <Route path="/admin/trainer-list" element={<TrainerListPage />} />
+            <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />
+            <Route path="/admin/update-price" element={<UpdatePricePage />} />
+            <Route path="/admin/upload-program" element={<UploadProgram />} />
+            <Route path="/admin/delete-program" element={<DeleteProgramPage />} />
+            <Route path="/admin/update-program" element={<UpdateProgramPage />} />
           </Routes>
         </Router>
       </CartProvider>
@@ -50,3 +73,4 @@ const App = () => {
 };
 
 export default App;
+

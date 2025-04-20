@@ -35,6 +35,8 @@ const Team = () => {
                     <button>Hesabımı Görüntüle</button>
                 </Link>
             </div>
+            
+            {/* Eğitmenleri listele */}
             <div className="trainer-list">
                 {trainers.map((trainer) => (
                     <TrainerCard key={trainer.id} {...trainer} />

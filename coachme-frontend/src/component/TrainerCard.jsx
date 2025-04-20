@@ -63,7 +63,10 @@ const TrainerCard = ({ id, name, age, gender, experience, specialty, bio }) => {
       <p><strong>Uzmanlık:</strong> {specialty}</p>
       <p><strong>Biyografi:</strong> {bio}</p>
 
+      <button onClick={handleAddToCart}>Sepetten kaldır</button>
       <button onClick={handleAddToCart}>Sepete Ekle</button>
+      <button onClick={handleAddToCart}>ödeme yap</button>
+
       <Link to={`/trainer/${id}`}>Profili İncele</Link>
 
       <button onClick={() => setShowComment(!showComment)}>
