@@ -1,4 +1,9 @@
 import React from 'react';
+import './styles.css';
+import './App.css';
+import './index.css';
+import './component/TrainerCard.css';
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
@@ -8,7 +13,6 @@ import TrainerProfile from './pages/TrainerProfile';
 import Cart from './pages/Cart';
 import AccountPage from './pages/AccountPage';
 import MedicalHistoryPage from './pages/MedicalHistoryPage';
-import AdminProgramPage from './pages/AdminProgramPage';
 import Register from './pages/Register';
 import BMIPage from './pages/BMIPage';
 import JoinTeam from './pages/JoinTeam';
@@ -27,47 +31,49 @@ import UpdateProgramPage from './pages/UpdateProgramPage';
 
 const App = () => {
   return (
-    <AuthProvider>
-      <CartProvider>
-        <Router>
-          <nav>
-            <ul>
-              <li><Link to="/login">GİRİŞ YAP</Link></li>
-              <li><Link to="/logout">ÇIKIŞ YAP</Link></li>
-              <li><Link to="/register">Kayıt Ol</Link></li>
-              <li><Link to="/join-team"><button>Ekibimize Katıl</button></Link></li>
-              <li><Link to="/admin">YÖNETİCİ PANELİ</Link></li>
-            </ul>
-          </nav>
+      <AuthProvider>
+        <CartProvider>
+          <Router>
+            <div className="app-container"> {/* Arka planı burada uygularız */}
+              <nav className="navbar">
+                <ul>
+                  <li><Link to="/login"><button>GİRİŞ YAP</button></Link></li>
+                  <li><Link to="/logout"><button>ÇIKIŞ YAP</button></Link></li>
+                  <li><Link to="/register"><button>KAYIT OL</button></Link></li>
+                  <li><Link to="/join-team"><button>EKİBİMİZE KATIL</button></Link></li>
+                  <li><Link to="/admin"><button>YÖNETİCİ PANELİ</button></Link></li>
+                </ul>
+              </nav>
 
-          <Routes>
-            {/* Genel Sayfalar */}
-            <Route path="/" element={<Team />} />
-            <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/account" element={<AccountPage />} />
-            <Route path="/medical-history" element={<MedicalHistoryPage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/mevcut-program" element={<MevcutProgram />} />
-            <Route path="/body-measurements" element={<BodyPage />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/bmi" element={<BMIPage />} />
-            <Route path="/join-team" element={<JoinTeam />} />
+              <Routes>
+                {/* Genel Sayfalar */}
+                <Route path="/" element={<Team />} />
+                <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/account" element={<AccountPage />} />
+                <Route path="/medical-history" element={<MedicalHistoryPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/logout" element={<Logout />} />
+                <Route path="/mevcut-program" element={<MevcutProgram />} />
+                <Route path="/body-measurements" element={<BodyPage />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/bmi" element={<BMIPage />} />
+                <Route path="/join-team" element={<JoinTeam />} />
 
-            {/* Yönetici Paneli ve Admin Sayfaları */}
-            <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/admin/add-trainer" element={<AddTrainerPages />} />  {/* Eğitmen ekleme sayfası */}
-            <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
-            <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />  {/* Eğitmen silme sayfası */}
-            <Route path="/admin/update-price" element={<UpdatePricePage />} />  {/* Fiyat güncelleme sayfası */}
-            <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
-            <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
-            <Route path="/admin/update-program" element={<UpdateProgramPage />} />  {/* Program güncelleme sayfası */}
-          </Routes>
-        </Router>
-      </CartProvider>
-    </AuthProvider>
+                {/* Yönetici Paneli ve Admin Sayfaları */}
+                <Route path="/admin" element={<AdminDashboard />} />
+                <Route path="/admin/add-trainer" element={<AddTrainerPages />} />
+                <Route path="/admin/trainer-list" element={<TrainerListPage />} />
+                <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />
+                <Route path="/admin/update-price" element={<UpdatePricePage />} />
+                <Route path="/admin/upload-program" element={<UploadProgram />} />
+                <Route path="/admin/delete-program" element={<DeleteProgramPage />} />
+                <Route path="/admin/update-program" element={<UpdateProgramPage />} />
+              </Routes>
+            </div>
+          </Router>
+        </CartProvider>
+      </AuthProvider>
   );
 };
 

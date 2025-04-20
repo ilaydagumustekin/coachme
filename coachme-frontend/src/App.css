@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+/* Genel Arka Plan Rengi */
+/* Arka plan rengini gri yapıyoruz */
+body {
+  background-color: #f0f0f0; /* açık gri */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar düzeni */
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar li {
+  margin: 0;
 }
+
+/* Navbar'daki butonlar zaten kırmızıya uyar çünkü index.css'teki global button geçerli */

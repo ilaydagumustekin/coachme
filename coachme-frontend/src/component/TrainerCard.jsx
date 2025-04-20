@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
-import { Link } from 'react-router-dom';
-import './TrainerCard.css';  // Arkadaşınızın CSS dosyasını ekliyoruz
+import './TrainerCard.css';
 
 // Argo/küfür listesi
 const bannedWords = ['küfür1', 'küfür2', 'argo1', 'argo2'];
@@ -63,11 +62,12 @@ const TrainerCard = ({ id, name, age, gender, experience, specialty, bio }) => {
       <p><strong>Uzmanlık:</strong> {specialty}</p>
       <p><strong>Biyografi:</strong> {bio}</p>
 
-      <button onClick={handleAddToCart}>Sepetten kaldır</button>
+      <button onClick={handleAddToCart}>Sepetten Kaldır</button>
       <button onClick={handleAddToCart}>Sepete Ekle</button>
-      <button onClick={handleAddToCart}>ödeme yap</button>
+      <button onClick={handleAddToCart}>Ödeme Yap</button>
+        <button onClick={handleAddToCart}>Profili İncele</button>
 
-      <Link to={`/trainer/${id}`}>Profili İncele</Link>
+
 
       <button onClick={() => setShowComment(!showComment)}>
         {showComment ? "İptal" : "Yorum Yap"}
