@@ -49,6 +49,7 @@ const App = () => {
                         </ul>
                     </nav>
                     <Routes>
+                        {/* Genel Sayfalar */}
                         <Route path="/" element={<Team />} />
                         <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
                         <Route path="/cart" element={<Cart />} />
@@ -58,6 +59,11 @@ const App = () => {
                         <Route path="/logout" element={<Logout />} />
                         <Route path="/mevcut-program" element={<MevcutProgram />} />
                         <Route path="/body-measurements" element={<BodyPage />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/bmi" element={<BMIPage />} />
+                        <Route path="/join-team" element={<JoinTeam />} />
+
+                        {/* Yönetici Paneli ve Admin Sayfaları */}
                         <Route path="/admin" element={<AdminDashboard />} />
                         <Route path="/admin/add-trainer" element={<AddTrainerPages />} />  {/* Eğitmen ekleme sayfası */}
                         <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
@@ -66,9 +72,6 @@ const App = () => {
                         <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
                         <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
                         <Route path="/admin/update-program" element={<UpdateProgramPage />} />  {/* Program güncelleme sayfası */}
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/bmi" element={<BMIPage />} />
-                        <Route path="/join-team" element={<JoinTeam />} />
                     </Routes>
                 </Router>
             </CartProvider>
