@@ -37,34 +37,33 @@ const App = () => {
               <li><Link to="/register">Kayıt Ol</Link></li>
               <li><Link to="/join-team"><button>Ekibimize Katıl</button></Link></li>
               <li><Link to="/admin">YÖNETİCİ PANELİ</Link></li>
-              
-
-
             </ul>
           </nav>
 
           <Routes>
+            {/* Genel Sayfalar */}
             <Route path="/" element={<Team />} />
             <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/account" element={<AccountPage />} />
             <Route path="/medical-history" element={<MedicalHistoryPage />} />
-            <Route path="/admin/programs" element={<AdminProgramPage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/mevcut-program" element={<MevcutProgram />} />
+            <Route path="/body-measurements" element={<BodyPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/bmi" element={<BMIPage />} />
             <Route path="/join-team" element={<JoinTeam />} />
-            <Route path="/mevcut-program" element={<MevcutProgram />} />
-            <Route path="/body-measurements" element={<BodyPage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
+
+            {/* Yönetici Paneli ve Admin Sayfaları */}
             <Route path="/admin" element={<AdminDashboard />} />
-            <Route path="/admin/add-trainer" element={<AddTrainerPages />} />
-            <Route path="/admin/trainer-list" element={<TrainerListPage />} />
-            <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />
-            <Route path="/admin/update-price" element={<UpdatePricePage />} />
-            <Route path="/admin/upload-program" element={<UploadProgram />} />
-            <Route path="/admin/delete-program" element={<DeleteProgramPage />} />
-            <Route path="/admin/update-program" element={<UpdateProgramPage />} />
+            <Route path="/admin/add-trainer" element={<AddTrainerPages />} />  {/* Eğitmen ekleme sayfası */}
+            <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
+            <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />  {/* Eğitmen silme sayfası */}
+            <Route path="/admin/update-price" element={<UpdatePricePage />} />  {/* Fiyat güncelleme sayfası */}
+            <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
+            <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
+            <Route path="/admin/update-program" element={<UpdateProgramPage />} />  {/* Program güncelleme sayfası */}
           </Routes>
         </Router>
       </CartProvider>
@@ -73,4 +72,3 @@ const App = () => {
 };
 
 export default App;
-

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext'; // Doğru olan bu
+import { useAuth } from '../context/AuthContext';
 
 const Logout = () => {
     const { logout } = useAuth(); // custom hook ile context'e erişiyoruz

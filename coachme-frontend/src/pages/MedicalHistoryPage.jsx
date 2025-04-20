@@ -1,4 +1,3 @@
-// src/pages/MedicalHistoryPage.jsx
 import React from 'react';
 import MedicalHistoryForm from '../component/MedicalHistoryForm';
 
