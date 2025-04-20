@@ -14,6 +14,11 @@ const AdminDashboard = () => {
         navigate('/admin/delete-trainer');
     };
 
+    // "Fiyat Güncelle" butonuna tıklandığında kullanıcıyı fiyat güncelleme sayfasına yönlendir
+    const handleUpdatePriceClick = () => {
+        navigate('/admin/update-price');
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
             <h1 className="text-3xl font-bold mb-8">Yönetici Paneli</h1>
@@ -30,7 +35,12 @@ const AdminDashboard = () => {
                 >
                     Eğitmen Sil
                 </button>
-                <button className="bg-yellow-500 text-white py-3 rounded-xl shadow hover:bg-yellow-600 transition">Fiyat Güncelle</button>
+                <button
+                    onClick={handleUpdatePriceClick}
+                    className="bg-yellow-500 text-white py-3 rounded-xl shadow hover:bg-yellow-600 transition"
+                >
+                    Fiyat Güncelle
+                </button>
                 <button className="bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition">Program Yükle</button>
                 <button className="bg-red-500 text-white py-3 rounded-xl shadow hover:bg-red-600 transition">Program Sil</button>
                 <button className="bg-indigo-600 text-white py-3 rounded-xl shadow hover:bg-indigo-700 transition">Program Güncelle</button>
