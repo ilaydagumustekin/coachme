@@ -26,14 +26,18 @@
 // export default App;
 
 
+// src/App.js
 import React from 'react';
-import ProgramPage from './pages/ProgramPages';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CurrentProgramPage from './pages/CurrentProgramPage';
 
 const App = () => {
     return (
-        <div>
-            <ProgramPage />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/mevcut-program" element={<CurrentProgramPage />} />
+            </Routes>
+        </Router>
     );
 };
 

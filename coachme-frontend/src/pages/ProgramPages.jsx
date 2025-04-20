@@ -4,11 +4,17 @@ import ProgramDetail from '../component/ProgramDetails';
 import ProgramProgress from '../component/ProgramProgress';
 import DraftWarningModal from '../component/DraftWarningModal';
 
-const ProgramPage = () => {
-    const [selectedProgram, setSelectedProgram] = useState(null);
-    const [joinedProgram, setJoinedProgram] = useState(null);
-    const [progress, setProgress] = useState(0);
-    const [showModal, setShowModal] = useState(false);
+const ProgramPage = ({
+                         selectedProgram,
+                         joinedProgram,
+                         archivedPrograms,
+                         showWarning,
+                         onSelectProgram,
+                         onJoinProgram,
+                         onChangeProgram,
+                         onReturnToOldProgram
+                     }) => {
+    const [isWarningVisible, setIsWarningVisible] = useState(false);
 
     const programs = [
         {
@@ -16,51 +22,53 @@ const ProgramPage = () => {
             nutrition: 'Günde 3 öğün dengeli beslenme',
             training: 'Haftada 3 gün yürüyüş',
             duration: 4,
-            difficulty: 'Kolay'
+            difficulty: 'Kolay',
+            dateChanged: '2025-04-10'
         },
         {
             title: 'İleri Seviye Programı',
             nutrition: 'Protein ağırlıklı diyet',
             training: 'Haftada 5 gün fitness',
             duration: 8,
-            difficulty: 'Zor'
+            difficulty: 'Zor',
+            dateChanged: '2025-04-01'
         }
     ];
 
-    const handleProgramSelect = (program) => {
-        if (selectedProgram && !joinedProgram) {
-            setShowModal(true);
-        } else {
-            setSelectedProgram(program);
-        }
-    };
-
-    const handleJoin = () => {
-        setJoinedProgram(selectedProgram);
-        setProgress(0);
-    };
-
-    const handleSaveDraft = () => {
-        console.log('Taslak kaydedildi');
-        setShowModal(false);
-    };
-
-    const handleDiscard = () => {
-        setSelectedProgram(null);
-        setShowModal(false);
-    };
-
     return (
         <div>
-            <h1>CoachMe Programları</h1>
-            {!joinedProgram && (
-                <ProgramList programs={programs} onSelect={handleProgramSelect} />
+            <h1>Mevcut Programım</h1>
+
+            {/* Mevcut program bilgileri */}
+            {joinedProgram ? (
+                <div>
+                    <h2>{joinedProgram.title}</h2>
+                    <p><strong>Beslenme:</strong> {joinedProgram.nutrition}</p>
+                    <p><strong>Antrenman:</strong> {joinedProgram.training}</p>
+                    <p><strong>Süresi:</strong> {joinedProgram.duration} hafta</p>
+                    <p><strong>Zorluk:</strong> {joinedProgram.difficulty}</p>
+                    <p><strong>Değişim Tarihi:</strong> {joinedProgram.dateChanged}</p>
+                    <button onClick={() => onChangeProgram(programs[1])}>Programı Değiştir</button>
+                </div>
+            ) : (
+                <div>
+                    <h2>Henüz bir programa katılmadınız</h2>
+                </div>
             )}
-            {!joinedProgram && selectedProgram && (
-                <ProgramDetail program={selectedProgram} onJoin={handleJoin} />
+
+            {/* Program değiştirme uyarısı */}
+            {isWarningVisible && (
+                <DraftWarningModal
+                    onSaveDraft={() => setIsWarningVisible(false)}
+                    onDiscard={() => setIsWarningVisible(false)}
+                />
             )}
-            {joinedProgram && <ProgramProgress progress={progress} />}
-            {showModal && <DraftWarningModal onSaveDraft={handleSaveDraft} onDiscard={handleDiscard} />}
+
+            {/* Eski programlara dönüş */}
+            <div>
+                <h2>Eski Programlar</h2>
+                <button onClick={onReturnToOldProgram}>Eski Programa Geri Dön</button>
+            </div>
         </div>
     );
 };
