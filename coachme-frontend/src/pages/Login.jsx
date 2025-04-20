@@ -15,8 +15,7 @@ const Login = () => {
         } else {
             setError("");
             alert("Giriş başarılı!");
-            // Burada genellikle backend'e API çağrısı yapılır
-            // API'den gelen yanıta göre yönlendirme yapılabilir.
+
         }
     };
 

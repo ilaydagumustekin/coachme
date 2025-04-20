@@ -20,6 +20,9 @@ import UpdatePricePage from './pages/UpdatePricePage';  // Fiyat güncelleme say
 import UploadProgram from './pages/UploadProgram';  // Program yükleme sayfası
 import DeleteProgramPage from './pages/DeleteProgramPage';  // Program silme sayfası
 import UpdateProgramPage from './pages/UpdateProgramPage';  // Program güncelleme sayfası
+import Register from './pages/Register';
+import BMIPage from './pages/BMIPage';
+import JoinTeam from './pages/JoinTeam';
 
 const App = () => {
     return (
@@ -34,6 +37,12 @@ const App = () => {
                             <li>
                                 <Link to="/logout">ÇIKIŞ YAP</Link>
                             </li>
+                            <li>
+                                <Link to="/register">KAYIT OL</Link>
+                            </li>
+                            <Link to="/join-team">
+                                <button>Ekibimize Katıl</button>
+                            </Link>
                             <li>
                                 <Link to="/admin">YÖNETİCİ PANELİ</Link> {/* Admin paneli linki */}
                             </li>
@@ -57,6 +66,9 @@ const App = () => {
                         <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
                         <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
                         <Route path="/admin/update-program" element={<UpdateProgramPage />} />  {/* Program güncelleme sayfası */}
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/bmi" element={<BMIPage />} />
+                        <Route path="/join-team" element={<JoinTeam />} />
                     </Routes>
                 </Router>
             </CartProvider>
