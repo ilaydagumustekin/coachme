@@ -19,6 +19,7 @@ import DeleteTrainerForm from './pages/DeleteTrainerForm';  // Yeni sayfa
 import UpdatePricePage from './pages/UpdatePricePage';  // Fiyat güncelleme sayfası
 import UploadProgram from './pages/UploadProgram';  // Program yükleme sayfası
 import DeleteProgramPage from './pages/DeleteProgramPage';  // Program silme sayfası
+import UpdateProgramPage from './pages/UpdateProgramPage';  // Program güncelleme sayfası
 
 const App = () => {
     return (
@@ -55,6 +56,7 @@ const App = () => {
                         <Route path="/admin/update-price" element={<UpdatePricePage />} />  {/* Fiyat güncelleme sayfası */}
                         <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
                         <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
+                        <Route path="/admin/update-program" element={<UpdateProgramPage />} />  {/* Program güncelleme sayfası */}
                     </Routes>
                 </Router>
             </CartProvider>
