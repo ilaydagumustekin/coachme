@@ -17,6 +17,8 @@ import AddTrainerPages from './pages/AddTrainerPages';  // Yeni sayfa
 import TrainerListPage from './pages/TrainerListPage';  // Yeni sayfa
 import DeleteTrainerForm from './pages/DeleteTrainerForm';  // Yeni sayfa
 import UpdatePricePage from './pages/UpdatePricePage';  // Fiyat güncelleme sayfası
+import UploadProgram from './pages/UploadProgram';  // Program yükleme sayfası
+import DeleteProgramPage from './pages/DeleteProgramPage';  // Program silme sayfası
 
 const App = () => {
     return (
@@ -51,6 +53,8 @@ const App = () => {
                         <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
                         <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />  {/* Eğitmen silme sayfası */}
                         <Route path="/admin/update-price" element={<UpdatePricePage />} />  {/* Fiyat güncelleme sayfası */}
+                        <Route path="/admin/upload-program" element={<UploadProgram />} />  {/* Program yükleme sayfası */}
+                        <Route path="/admin/delete-program" element={<DeleteProgramPage />} />  {/* Program silme sayfası */}
                     </Routes>
                 </Router>
             </CartProvider>

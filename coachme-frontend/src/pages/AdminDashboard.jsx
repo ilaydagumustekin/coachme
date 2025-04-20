@@ -19,6 +19,16 @@ const AdminDashboard = () => {
         navigate('/admin/update-price');
     };
 
+    // "Program Yükle" butonuna tıklandığında kullanıcıyı program yükleme sayfasına yönlendir
+    const handleUploadProgramClick = () => {
+        navigate('/admin/upload-program');
+    };
+
+    // "Program Sil" butonuna tıklandığında kullanıcıyı program silme sayfasına yönlendir
+    const handleDeleteProgramClick = () => {
+        navigate('/admin/delete-program');
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
             <h1 className="text-3xl font-bold mb-8">Yönetici Paneli</h1>
@@ -41,9 +51,21 @@ const AdminDashboard = () => {
                 >
                     Fiyat Güncelle
                 </button>
-                <button className="bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition">Program Yükle</button>
-                <button className="bg-red-500 text-white py-3 rounded-xl shadow hover:bg-red-600 transition">Program Sil</button>
-                <button className="bg-indigo-600 text-white py-3 rounded-xl shadow hover:bg-indigo-700 transition">Program Güncelle</button>
+                <button
+                    onClick={handleUploadProgramClick}
+                    className="bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition"
+                >
+                    Program Yükle
+                </button>
+                <button
+                    onClick={handleDeleteProgramClick}
+                    className="bg-red-500 text-white py-3 rounded-xl shadow hover:bg-red-600 transition"
+                >
+                    Program Sil
+                </button>
+                <button className="bg-indigo-600 text-white py-3 rounded-xl shadow hover:bg-indigo-700 transition">
+                    Program Güncelle
+                </button>
             </div>
         </div>
     );
