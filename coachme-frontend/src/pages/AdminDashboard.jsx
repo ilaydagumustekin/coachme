@@ -9,6 +9,11 @@ const AdminDashboard = () => {
         navigate('/admin/add-trainer');
     };
 
+    // "Eğitmen Sil" butonuna tıklandığında kullanıcıyı eğitmen silme sayfasına yönlendir
+    const handleDeleteTrainerClick = () => {
+        navigate('/admin/delete-trainer');
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
             <h1 className="text-3xl font-bold mb-8">Yönetici Paneli</h1>
@@ -19,7 +24,12 @@ const AdminDashboard = () => {
                 >
                     Eğitmen Ekle
                 </button>
-                <button className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition">Eğitmen Sil</button>
+                <button
+                    onClick={handleDeleteTrainerClick}
+                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
+                >
+                    Eğitmen Sil
+                </button>
                 <button className="bg-yellow-500 text-white py-3 rounded-xl shadow hover:bg-yellow-600 transition">Fiyat Güncelle</button>
                 <button className="bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition">Program Yükle</button>
                 <button className="bg-red-500 text-white py-3 rounded-xl shadow hover:bg-red-600 transition">Program Sil</button>
@@ -30,4 +40,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-

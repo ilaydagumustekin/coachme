@@ -15,6 +15,7 @@ import Logout from './pages/Logout';
 import AdminDashboard from './pages/AdminDashboard';
 import AddTrainerPages from './pages/AddTrainerPages';  // Yeni sayfa
 import TrainerListPage from './pages/TrainerListPage';  // Yeni sayfa
+import DeleteTrainerForm from './pages/DeleteTrainerForm';  // Yeni sayfa
 
 const App = () => {
     return (
@@ -47,6 +48,7 @@ const App = () => {
                         <Route path="/admin" element={<AdminDashboard />} />
                         <Route path="/admin/add-trainer" element={<AddTrainerPages />} />  {/* Eğitmen ekleme sayfası */}
                         <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
+                        <Route path="/admin/delete-trainer" element={<DeleteTrainerForm />} />  {/* Eğitmen silme sayfası */}
                     </Routes>
                 </Router>
             </CartProvider>
@@ -55,4 +57,3 @@ const App = () => {
 };
 
 export default App;
-
