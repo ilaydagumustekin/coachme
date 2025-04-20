@@ -1,11 +1,12 @@
 /* Genel Arka Plan Rengi */
 /* Arka plan rengini gri yapıyoruz */
 body {
-  background-color: #f0f0f0; /* açık gri */
+  background-color: #2c2c2c; /* koyu gri */
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100%;
 }
+
 
 /* Navbar düzeni */
 .navbar {
