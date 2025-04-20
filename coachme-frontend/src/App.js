@@ -1,47 +1,52 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context/CartContext';  // Sepet context'i
-import { AuthProvider } from './context/AuthContext';  // Kullanıcı girişi context'i
-import Team from './pages/Team';  // Ana sayfa: Eğitmen listesi
-import TrainerProfile from './pages/TrainerProfile';  // Eğitmen profili sayfası
-import Cart from './pages/Cart';  // Sepet sayfası
-import AccountPage from './pages/AccountPage'; // Hesabım sayfası
-import MedicalHistoryPage from './pages/MedicalHistoryPage'; // Hastalık geçmişi sayfası
-import MevcutProgram from './component/MevcutProgram'; // Mevcut program sayfası bileşeni
-import BodyPage from './pages/BodyPage'; // Beden ölçüsü bilgileri sayfası
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext';
+
+import Team from './pages/Team';
+import TrainerProfile from './pages/TrainerProfile';
+import Cart from './pages/Cart';
+import AccountPage from './pages/AccountPage';
+import MedicalHistoryPage from './pages/MedicalHistoryPage';
+import MevcutProgram from './component/MevcutProgram';
+import BodyPage from './pages/BodyPage';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
-import { Link } from 'react-router-dom';
+import AdminDashboard from './pages/AdminDashboard';
+import AddTrainerPages from './pages/AddTrainerPages';  // Yeni sayfa
+import TrainerListPage from './pages/TrainerListPage';  // Yeni sayfa
 
 const App = () => {
     return (
-        <AuthProvider>  {/* Kullanıcı girişi için context */}
-            <CartProvider>  {/* Sepet için context */}
-                <Router>  {/* Routing işlemi */}
+        <AuthProvider>
+            <CartProvider>
+                <Router>
                     <nav>
                         <ul>
                             <li>
-                                <Link to="/login"> GİRİŞ YAP</Link>
+                                <Link to="/login">GİRİŞ YAP</Link>
                             </li>
                             <li>
-                                <Link to="/logout"> ÇIKIŞ YAP</Link>
+                                <Link to="/logout">ÇIKIŞ YAP</Link>
+                            </li>
+                            <li>
+                                <Link to="/admin">YÖNETİCİ PANELİ</Link> {/* Admin paneli linki */}
                             </li>
                         </ul>
                     </nav>
                     <Routes>
-                        <Route path="/" element={<Team />} />  {/* Ana sayfa: Eğitmen listesi */}
-                        <Route path="/trainer/:trainerId" element={<TrainerProfile />} />  {/* Eğitmen profili sayfası */}
-                        <Route path="/cart" element={<Cart />} />  {/* Sepet sayfası */}
-                        <Route path="/account" element={<AccountPage />} />  {/* Hesabım sayfası */}
-                        <Route path="/medical-history" element={<MedicalHistoryPage />} />  {/* Hastalık geçmişi sayfası */}
-                        <Route path="/login" element={<Login />} />  {/* Login sayfası */}
-                        <Route path="/logout" element={<Logout />} />  {/* Login sayfası */}
-
-                        {/* Mevcut Program Sayfası */}
-                        <Route path="/mevcut-program" element={<MevcutProgram />} />  {/* Mevcut Program sayfası */}
-
-                        {/* Beden ölçüsü bilgileri sayfası */}
-                        <Route path="/body-measurements" element={<BodyPage />} />  {/* Beden ölçüsü sayfası */}
+                        <Route path="/" element={<Team />} />
+                        <Route path="/trainer/:trainerId" element={<TrainerProfile />} />
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/account" element={<AccountPage />} />
+                        <Route path="/medical-history" element={<MedicalHistoryPage />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/logout" element={<Logout />} />
+                        <Route path="/mevcut-program" element={<MevcutProgram />} />
+                        <Route path="/body-measurements" element={<BodyPage />} />
+                        <Route path="/admin" element={<AdminDashboard />} />
+                        <Route path="/admin/add-trainer" element={<AddTrainerPages />} />  {/* Eğitmen ekleme sayfası */}
+                        <Route path="/admin/trainer-list" element={<TrainerListPage />} />  {/* Eğitmenler listesi sayfası */}
                     </Routes>
                 </Router>
             </CartProvider>
