@@ -7,7 +7,7 @@ PROJE KATEGORİSİ: E-Ticaret website
 
 REFERANS WEBSİTE: https://onlinekocunuz.com/?gad_source=1&gbraid=0AAAAAC_Vm9tyyhuWST5aB_sb1ddH9HKoQ&gclid=EAIaIQobChMI7PGL6NGgjAMVGWZBAh2_swhwEAAYAiAAEgKEdfD_BwE
 
-WEBSİTE ADRESİ: (http://coachme.kesug.com/)
+WEBSİTE ADRESİ: http://coachme.kesug.com/
 
 GRUP ADI: Thingk Tank
 
@@ -16,6 +16,6 @@ PROJE EKİBİ: İlayda Gümüştekin, Başak Karataş
 [1.Gereksinim Analizi](https://github.com/ilaydagumustekin/coachme/blob/main/Gereksinim-Analizi.md)<br>
 [2.Durum Diyagramı](https://github.com/ilaydagumustekin/coachme/blob/main/Durum-Diyagram%C4%B1.md)<br>
 [3.Durum Senaryoları](https://github.com/ilaydagumustekin/coachme/blob/main/Durum-Senaryolar%C4%B1.md)<br>
-[4.Front-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-frontend)<br>
+[4.Front-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-frontend/src)<br>
 5.Back-End<br>
 6.Video Sunum
