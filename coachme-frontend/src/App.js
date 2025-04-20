@@ -10,6 +10,7 @@ import MedicalHistoryPage from './pages/MedicalHistoryPage'; // Hastalık geçmi
 import MevcutProgram from './component/MevcutProgram'; // Mevcut program sayfası bileşeni
 import BodyPage from './pages/BodyPage'; // Beden ölçüsü bilgileri sayfası
 import Login from './pages/Login';
+import Logout from './pages/Logout';
 import { Link } from 'react-router-dom';
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
                             <li>
                                 <Link to="/login"> GİRİŞ YAP</Link>
                             </li>
+                            <li>
+                                <Link to="/logout"> ÇIKIŞ YAP</Link>
+                            </li>
                         </ul>
                     </nav>
                     <Routes>
@@ -31,6 +35,7 @@ const App = () => {
                         <Route path="/account" element={<AccountPage />} />  {/* Hesabım sayfası */}
                         <Route path="/medical-history" element={<MedicalHistoryPage />} />  {/* Hastalık geçmişi sayfası */}
                         <Route path="/login" element={<Login />} />  {/* Login sayfası */}
+                        <Route path="/logout" element={<Logout />} />  {/* Login sayfası */}
 
                         {/* Mevcut Program Sayfası */}
                         <Route path="/mevcut-program" element={<MevcutProgram />} />  {/* Mevcut Program sayfası */}
