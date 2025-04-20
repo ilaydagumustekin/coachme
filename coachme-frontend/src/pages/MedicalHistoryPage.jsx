@@ -1,6 +1,6 @@
 // src/pages/MedicalHistoryPage.jsx
 import React from 'react';
-import MedicalHistoryForm from '../Components/MedicalHistoryForm';
+import MedicalHistoryForm from '../component/MedicalHistoryForm';
 
 const MedicalHistoryPage = () => {
   return (

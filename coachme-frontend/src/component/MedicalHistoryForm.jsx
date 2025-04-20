@@ -1,4 +1,3 @@
-// src/components/MedicalHistoryForm.jsx
 import React, { useState } from 'react';
 
 const MedicalHistoryForm = () => {

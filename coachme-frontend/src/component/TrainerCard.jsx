@@ -1,8 +1,8 @@
-// TrainerCard.jsx
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import './TrainerCard.css';  // Arkadaşınızın CSS dosyasını ekliyoruz
 
 // Argo/küfür listesi
 const bannedWords = ['küfür1', 'küfür2', 'argo1', 'argo2'];
@@ -17,8 +17,8 @@ const censorBadWords = (text) => {
 };
 
 const TrainerCard = ({ id, name, age, gender, experience, specialty, bio }) => {
-  const { user, purchasedTrainers } = useAuth(); // eğitimi alıp almadığı buradan kontrol
-  const { addToCart } = useCart(); 
+  const { user, purchasedTrainers } = useAuth(); // Eğitimi alıp almadığı buradan kontrol
+  const { addToCart } = useCart();
 
   const [showComment, setShowComment] = useState(false);
   const [comment, setComment] = useState("");
@@ -57,7 +57,12 @@ const TrainerCard = ({ id, name, age, gender, experience, specialty, bio }) => {
   return (
     <div className="trainer-card">
       <h3>{name}</h3>
-      <p>{specialty}</p>
+      <p><strong>Yaş:</strong> {age}</p>
+      <p><strong>Cinsiyet:</strong> {gender}</p>
+      <p><strong>Tecrübe:</strong> {experience} yıl</p>
+      <p><strong>Uzmanlık:</strong> {specialty}</p>
+      <p><strong>Biyografi:</strong> {bio}</p>
+
       <button onClick={handleAddToCart}>Sepete Ekle</button>
       <Link to={`/trainer/${id}`}>Profili İncele</Link>
 

@@ -1,7 +1,7 @@
 // src/pages/UserProfile.jsx
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';  // Kullanıcı bilgisi
-import MedicalHistoryForm from '../Components/MedicalHistoryForm';
+import MedicalHistoryForm from '../component/MedicalHistoryForm';
 
 const UserProfile = () => {
   const { user } = useAuth();  // Giriş yapan kullanıcı

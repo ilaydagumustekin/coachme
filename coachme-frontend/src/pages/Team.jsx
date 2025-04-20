@@ -1,7 +1,7 @@
 // Team.jsx
 import React from 'react';
 import { Link } from 'react-router-dom'; // Link'i import ediyoruz
-import TrainerCard from '../Components/TrainerCard';
+import TrainerCard from '../component/TrainerCard';  // 'Components' dosyasından TrainerCard'ı import ediyoruz
 import './Team.css';
 
 const trainers = [
@@ -23,6 +23,7 @@ const trainers = [
         specialty: "Pilates ve Yoga",
         bio: "Zihin-beden uyumu konusunda uzmanlaşmış, birçok yoga eğitimi vermiştir."
     }
+    // Eğitmen listeni dilediğin kadar uzatabilirsin
 ];
 
 const Team = () => {

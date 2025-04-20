@@ -1,14 +1,30 @@
 // src/pages/AccountPage.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AccountPage = () => {
-  return (
-    <div>
-      <h2>Hesabım</h2>
-      <p>Burada BMI, hastalık geçmişi ve yorumlarınızı görebilirsiniz.</p>
-      {/* BMI ve hastalık geçmişi componentlerini buraya çağırabilirsin */}
-    </div>
-  );
+    return (
+        <div>
+            <h1>Hesabım</h1>
+            <p>Burada BMI, hastalık geçmişi ve yorumlarınızı görebilirsiniz.</p>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/current-program">Mevcut Programım</Link>
+                    </li>
+                    <li>
+                        <Link to="/change-program">Programı Değiştir</Link>
+                    </li>
+                    <li>
+                        <Link to="/medical-history">Hastalık Geçmişi</Link>
+                    </li>
+                    <li>
+                        <Link to="/bmi">Vücut Kitle Endeksi</Link>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    );
 };
 
 export default AccountPage;
