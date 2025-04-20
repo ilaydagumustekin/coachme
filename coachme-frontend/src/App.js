@@ -9,18 +9,28 @@ import AccountPage from './pages/AccountPage'; // Hesabım sayfası
 import MedicalHistoryPage from './pages/MedicalHistoryPage'; // Hastalık geçmişi sayfası
 import MevcutProgram from './component/MevcutProgram'; // Mevcut program sayfası bileşeni
 import BodyPage from './pages/BodyPage'; // Beden ölçüsü bilgileri sayfası
+import Login from './pages/Login';
+import { Link } from 'react-router-dom';
 
 const App = () => {
     return (
         <AuthProvider>  {/* Kullanıcı girişi için context */}
             <CartProvider>  {/* Sepet için context */}
                 <Router>  {/* Routing işlemi */}
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/login"> GİRİŞ YAP</Link>
+                            </li>
+                        </ul>
+                    </nav>
                     <Routes>
                         <Route path="/" element={<Team />} />  {/* Ana sayfa: Eğitmen listesi */}
                         <Route path="/trainer/:trainerId" element={<TrainerProfile />} />  {/* Eğitmen profili sayfası */}
                         <Route path="/cart" element={<Cart />} />  {/* Sepet sayfası */}
                         <Route path="/account" element={<AccountPage />} />  {/* Hesabım sayfası */}
                         <Route path="/medical-history" element={<MedicalHistoryPage />} />  {/* Hastalık geçmişi sayfası */}
+                        <Route path="/login" element={<Login />} />  {/* Login sayfası */}
 
                         {/* Mevcut Program Sayfası */}
                         <Route path="/mevcut-program" element={<MevcutProgram />} />  {/* Mevcut Program sayfası */}

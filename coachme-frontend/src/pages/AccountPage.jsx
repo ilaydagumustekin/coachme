@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AccountPage = () => {
     return (
         <div>
-            <h1>Hesabım</h1>
+            <h1>HESABIM</h1>
             <p>Burada kişisel hesap bilgilerinizi görüntüleyebilirsiniz.</p>
             <nav>
                 <ul>
