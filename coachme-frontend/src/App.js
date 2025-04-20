@@ -13,9 +13,9 @@ import BodyPage from './pages/BodyPage';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import AdminDashboard from './pages/AdminDashboard';
-import AddTrainerPages from './pages/AddTrainerPages';  // Yeni sayfa
-import TrainerListPage from './pages/TrainerListPage';  // Yeni sayfa
-import DeleteTrainerForm from './pages/DeleteTrainerForm';  // Yeni sayfa
+import AddTrainerPages from './pages/AddTrainerPages';
+import TrainerListPage from './pages/TrainerListPage';
+import DeleteTrainerForm from './pages/DeleteTrainerForm';
 import UpdatePricePage from './pages/UpdatePricePage';  // Fiyat güncelleme sayfası
 import UploadProgram from './pages/UploadProgram';  // Program yükleme sayfası
 import DeleteProgramPage from './pages/DeleteProgramPage';  // Program silme sayfası
