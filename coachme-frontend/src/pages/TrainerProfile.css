@@ -1,0 +1,19 @@
+/* TrainerProfile.css */
+.trainer-profile {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trainer-profile h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .trainer-profile p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  

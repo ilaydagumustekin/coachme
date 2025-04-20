@@ -1,0 +1,18 @@
+/* Team.css */
+.team-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .team-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .trainer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  

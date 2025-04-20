@@ -1,34 +1,31 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import JoinTeam from "./pages/JoinTeam";  // Ekibimize Katıl sayfası
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';  // Sepet context'i
+import { AuthProvider } from './context/AuthContext';  // Kullanıcı girişi context'i
+import Team from './pages/Team';  // Ana sayfa: Eğitmen listesi
+import TrainerProfile from './pages/TrainerProfile';  // Eğitmen profili sayfası
+import Cart from './pages/Cart';  // Sepet sayfası
+import AccountPage from './pages/AccountPage'; // Hesabım sayfası
+import MedicalHistoryPage from './pages/MedicalHistoryPage'; // Hastalık geçmişi sayfası
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <h1>CoachMe Fitness</h1>
-        <nav>
-          <ul>
-            <li><Link to="/login">Giriş Yap</Link></li>
-            <li><Link to="/register">Kayıt Ol</Link></li>
-            <li><Link to="/join-team">Ekibimize Katıl</Link></li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<h2>Ana Sayfa</h2>} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/join-team" element={<JoinTeam />} />
-        </Routes>
-      </div>
-    </Router>
+    <AuthProvider>  {/* Kullanıcı girişi için context */}
+      <CartProvider>  {/* Sepet için context */}
+        <Router>  {/* Routing işlemi */}
+          <Routes>
+            <Route path="/" element={<Team />} />  {/* Ana sayfa: Eğitmen listesi */}
+            <Route path="/trainer/:trainerId" element={<TrainerProfile />} />  {/* Eğitmen profili sayfası */}
+            <Route path="/cart" element={<Cart />} />  {/* Sepet sayfası */}
+            <Route path="/account" element={<AccountPage />} />  {/* Hesabım sayfası */}
+            <Route path="/medical-history" element={<MedicalHistoryPage />} />  {/* Hastalık geçmişi sayfası */}
+          </Routes>
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
-
-
 
