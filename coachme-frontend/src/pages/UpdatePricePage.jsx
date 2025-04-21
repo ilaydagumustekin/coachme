@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const UpdatePricePage = () => {
     const [price, setPrice] = useState('');
@@ -14,28 +16,28 @@ const UpdatePricePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Update Price</h1>
-            <form onSubmit={handleSubmit} className="w-full max-w-xl">
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">FİYAT GÜNCELLE</h1>
+            <form onSubmit={handleSubmit} className="add-trainer-form">
                 <div className="mb-6">
                     <label htmlFor="price" className="block text-lg font-medium mb-2">
-                        New Price
+                        Yeni Fiyat
                     </label>
                     <input
                         id="price"
                         type="number"
                         value={price}
                         onChange={handlePriceChange}
-                        className="w-full p-3 border border-gray-300 rounded-md"
+                        className="w-full p-3 border rounded-lg mb-3"
                         placeholder="Enter new price"
                         required
                     />
                 </div>
                 <button
                     type="submit"
-                    className="bg-green-600 text-white py-3 px-6 rounded-xl shadow hover:bg-green-700 transition"
+                    className="w-full bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition"
                 >
-                    Update Price
+                    Güncel Fiyat
                 </button>
             </form>
         </div>

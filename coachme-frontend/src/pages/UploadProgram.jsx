@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const UploadProgram = () => {
     const [programName, setProgramName] = useState('');
@@ -9,11 +11,10 @@ const UploadProgram = () => {
     const [exercises, setExercises] = useState('');
     const [programFile, setProgramFile] = useState(null);
 
-    // Formu göndermek için
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Burada form verilerini göndereceğiz, örneğin bir API'ye.
+        // Form verilerini API'ye göndermek
         const formData = new FormData();
         formData.append('programName', programName);
         formData.append('programType', programType);
@@ -36,9 +37,9 @@ const UploadProgram = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Program Yükle</h1>
-            <form onSubmit={handleSubmit} className="bg-white p-6 rounded-xl shadow-lg w-full max-w-lg">
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">Program Yükle</h1>
+            <form onSubmit={handleSubmit} className="add-trainer-form">
                 <div className="mb-4">
                     <label htmlFor="programName" className="block text-sm font-medium text-gray-700">
                         Program Adı

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const DeleteProgramPage = () => {
     const [programId, setProgramId] = useState("");
@@ -22,26 +24,30 @@ const DeleteProgramPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Program Sil</h1>
-            <div className="w-full max-w-lg">
-                <label className="block text-lg font-medium text-gray-700 mb-2">
-                    Program ID
-                </label>
-                <input
-                    type="text"
-                    value={programId}
-                    onChange={(e) => setProgramId(e.target.value)}
-                    className="w-full p-2 border border-gray-300 rounded-md mb-4"
-                    placeholder="Program ID girin"
-                />
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">Program Sil</h1>
+            <div className="add-trainer-form">
+                <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-700">
+                        Program ID
+                    </label>
+                    <input
+                        type="text"
+                        value={programId}
+                        onChange={(e) => setProgramId(e.target.value)}
+                        className="w-full p-3 border border-gray-300 rounded-md"
+                        placeholder="Program ID girin"
+                    />
+                </div>
                 {error && <p className="text-red-500 mb-4">{error}</p>}
-                <button
-                    onClick={handleDeleteProgram}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Programı Sil
-                </button>
+                <div className="flex justify-center">
+                    <button
+                        onClick={handleDeleteProgram}
+                        className="bg-red-600 text-white py-3 px-6 rounded-xl shadow hover:bg-red-700 transition"
+                    >
+                        Programı Sil
+                    </button>
+                </div>
             </div>
         </div>
     );

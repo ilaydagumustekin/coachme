@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const DeleteTrainerForm = () => {
     const [trainers, setTrainers] = useState([]);
@@ -35,13 +37,20 @@ const DeleteTrainerForm = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Eğitmen Silme</h1>
-            <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">EĞİTMEN SİL</h1>
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    handleDelete();
+                }}
+                className="add-trainer-form"
+            >
                 <select
                     value={selectedTrainer}
                     onChange={(e) => setSelectedTrainer(e.target.value)}
-                    className="w-full p-3 border rounded-lg mb-4"
+                    className="w-full p-3 border rounded-lg mb-3"
+                    required
                 >
                     <option value="">Eğitmen Seçin</option>
                     {trainers.map((trainer) => (
@@ -52,12 +61,12 @@ const DeleteTrainerForm = () => {
                 </select>
 
                 <button
-                    onClick={handleDelete}
-                    className="w-full bg-red-600 text-white py-3 rounded-lg"
+                    type="submit"
+                    className="w-full bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
                 >
                     Eğitmeni Sil
                 </button>
-            </div>
+            </form>
         </div>
     );
 };

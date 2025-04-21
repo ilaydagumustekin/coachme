@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './AdminDashboard.css'; // Stil dosyasını buraya ekledim
+import './AddTrainerPages.css'; // Stil dosyasını buraya ekledim
 
 const UpdateProgramPage = () => {
     const [programData, setProgramData] = useState({
@@ -27,63 +29,77 @@ const UpdateProgramPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Program Güncelle</h1>
-            <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
-                <div className="mb-4">
-                    <label htmlFor="name" className="block text-lg font-semibold">Program Adı</label>
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">PROGRAM GÜNCELLE</h1>
+            <form onSubmit={handleSubmit} className="add-trainer-form">
+                <div className="mb-6">
+                    <label htmlFor="name" className="block text-lg font-medium mb-2 text-white">
+                        Program Adı
+                    </label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         value={programData.name}
                         onChange={handleInputChange}
-                        className="w-full p-2 border rounded-md mt-2"
+                        className="w-full p-3 border rounded-lg mb-3"
+                        placeholder="Program adı girin"
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="description" className="block text-lg font-semibold">Açıklama</label>
+                <div className="mb-6">
+                    <label htmlFor="description" className="block text-lg font-medium mb-2 text-white">
+                        Açıklama
+                    </label>
                     <textarea
                         id="description"
                         name="description"
                         value={programData.description}
                         onChange={handleInputChange}
-                        className="w-full p-2 border rounded-md mt-2"
+                        className="w-full p-3 border rounded-lg mb-3"
                         rows="4"
+                        placeholder="Program açıklamasını girin"
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="price" className="block text-lg font-semibold">Fiyat</label>
+                <div className="mb-6">
+                    <label htmlFor="price" className="block text-lg font-medium mb-2 text-white">
+                        Fiyat
+                    </label>
                     <input
                         type="number"
                         id="price"
                         name="price"
                         value={programData.price}
                         onChange={handleInputChange}
-                        className="w-full p-2 border rounded-md mt-2"
+                        className="w-full p-3 border rounded-lg mb-3"
+                        placeholder="Fiyat girin"
                         required
                     />
                 </div>
-                <div className="mb-4">
-                    <label htmlFor="duration" className="block text-lg font-semibold">Süre (gün)</label>
+                <div className="mb-6">
+                    <label htmlFor="duration" className="block text-lg font-medium mb-2 text-white">
+                        Süre (gün)
+                    </label>
                     <input
                         type="number"
                         id="duration"
                         name="duration"
                         value={programData.duration}
                         onChange={handleInputChange}
-                        className="w-full p-2 border rounded-md mt-2"
+                        className="w-full p-3 border rounded-lg mb-3"
+                        placeholder="Program süresi girin"
                         required
                     />
                 </div>
-                <button
-                    type="submit"
-                    className="bg-blue-600 text-white py-3 px-6 rounded-xl hover:bg-blue-700 transition"
-                >
-                    Güncelle
-                </button>
+                <div className="flex justify-center">
+                    <button
+                        type="submit"
+                        className="w-full bg-blue-600 text-white py-3 rounded-xl shadow hover:bg-blue-700 transition"
+                    >
+                        Güncelle
+                    </button>
+                </div>
             </form>
         </div>
     );
