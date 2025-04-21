@@ -4,16 +4,17 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     height: 100%;
-    background-image: url('https://images.pexels.com/photos/669584/pexels-photo-669584.jpeg'); /* Pexels fotoğrafı URL */
-    background-size: cover; /* Fotoğrafın sayfayı kaplamasını sağlarız */
-    background-position: center; /* Fotoğrafın merkezlenmesini sağlar */
-    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmasını engeller */
+    background-color: #f0f0f0; /* Diğer sayfa arka plan rengi */
 }
 
-/* Üst bar yüksekliği kadar boşluk bırak */
+/* Account container arka plan fotoğrafı */
 .account-container {
     margin-top: 100px; /* topbar yüksekliğine göre ayarlayabilirsin */
     padding: 20px;
+    background-image: url('https://images.pexels.com/photos/669584/pexels-photo-669584.jpeg'); /* Fotoğraf sadece burada */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Linklerin listesi */

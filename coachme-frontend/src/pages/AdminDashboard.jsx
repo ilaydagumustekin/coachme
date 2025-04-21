@@ -1,74 +1,34 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './AdminDashboard.css'; // Stil dosyasını eklemeyi unutma!
 
 const AdminDashboard = () => {
-    const navigate = useNavigate();
-
-    const handleAddTrainerClick = () => {
-        navigate('/admin/add-trainer');
-    };
-
-    const handleDeleteTrainerClick = () => {
-        navigate('/admin/delete-trainer');
-    };
-
-    const handleUpdatePriceClick = () => {
-        navigate('/admin/update-price');
-    };
-
-    const handleUploadProgramClick = () => {
-        navigate('/admin/upload-program');
-    };
-
-    const handleDeleteProgramClick = () => {
-        navigate('/admin/delete-program');
-    };
-
-    const handleUpdateProgramClick = () => {
-        navigate('/admin/update-program');
-    };
-
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Yönetici Paneli</h1>
-            <div className="grid grid-cols-2 gap-6 w-full max-w-xl">
-                <button
-                    onClick={handleAddTrainerClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Eğitmen Ekle
-                </button>
-                <button
-                    onClick={handleDeleteTrainerClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Eğitmen Sil
-                </button>
-                <button
-                    onClick={handleUpdatePriceClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Fiyat Güncelle
-                </button>
-                <button
-                    onClick={handleUploadProgramClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Program Yükle
-                </button>
-                <button
-                    onClick={handleDeleteProgramClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Program Sil
-                </button>
-                <button
-                    onClick={handleUpdateProgramClick}
-                    className="bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
-                >
-                    Program Güncelle
-                </button>
-            </div>
+        <div className="admin-container">
+            <h1>YÖNETİCİ PANELİ</h1>
+            <p>Yönetici işlemlerinizi buradan gerçekleştirebilirsiniz.</p>
+            <nav>
+                <ul className="admin-links">
+                    <li>
+                        <Link to="/admin/add-trainer">Eğitmen Ekle</Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/delete-trainer">Eğitmen Sil</Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/update-price">Fiyat Güncelle</Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/upload-program">Program Yükle</Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/delete-program">Program Sil</Link>
+                    </li>
+                    <li>
+                        <Link to="/admin/update-program">Program Güncelle</Link>
+                    </li>
+                </ul>
+            </nav>
         </div>
     );
 };
