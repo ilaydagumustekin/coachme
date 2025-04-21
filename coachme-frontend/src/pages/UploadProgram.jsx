@@ -38,7 +38,7 @@ const UploadProgram = () => {
 
     return (
         <div className="add-trainer-wrapper">
-            <h1 className="text-3xl font-bold text-white mb-8">Program Yükle</h1>
+            <h1 className="text-3xl font-bold text-white mb-8">PROGRAM YÜKLE</h1>
             <form onSubmit={handleSubmit} className="add-trainer-form">
                 <div className="mb-4">
                     <label htmlFor="programName" className="block text-sm font-medium text-gray-700">

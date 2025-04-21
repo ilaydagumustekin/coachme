@@ -25,7 +25,7 @@ const DeleteProgramPage = () => {
 
     return (
         <div className="add-trainer-wrapper">
-            <h1 className="text-3xl font-bold text-white mb-8">Program Sil</h1>
+            <h1 className="text-3xl font-bold text-white mb-8">PROGRAM SİL</h1>
             <div className="add-trainer-form">
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
