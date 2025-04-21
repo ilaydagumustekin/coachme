@@ -1,4 +1,4 @@
-// src/pages/UserProfile.jsx
+
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';  // Kullanıcı bilgisi
 import MedicalHistoryForm from '../component/MedicalHistoryForm';

@@ -1,0 +1,45 @@
+/* Genel sayfa stili */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/669584/pexels-photo-669584.jpeg'); /* Pexels fotoğrafı URL */
+    background-size: cover; /* Fotoğrafın sayfayı kaplamasını sağlarız */
+    background-position: center; /* Fotoğrafın merkezlenmesini sağlar */
+    background-repeat: no-repeat; /* Fotoğrafın tekrarlanmasını engeller */
+}
+
+/* Üst bar yüksekliği kadar boşluk bırak */
+.account-container {
+    margin-top: 100px; /* topbar yüksekliğine göre ayarlayabilirsin */
+    padding: 20px;
+}
+
+/* Linklerin listesi */
+.account-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Her bir linkin arasına koyu gri çerçeve */
+.account-links li {
+    margin: 10px 0;
+    padding: 12px;
+    border: 2px solid #333; /* koyu gri çerçeve */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.account-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+}
+
+.account-links li:hover {
+    background-color: #eaeaea;
+}

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './AccountPage.css'; // Stil dosyasını unutma!
 
 const AccountPage = () => {
     return (
-        <div>
+        <div className="account-container">
             <h1>HESABIM</h1>
             <p>Burada kişisel hesap bilgilerinizi görüntüleyebilirsiniz.</p>
             <nav>
-                <ul>
+                <ul className="account-links">
                     <li>
                         <Link to="/current-program">Mevcut Programım</Link>
                     </li>
