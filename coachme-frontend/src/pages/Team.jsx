@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Link'i import ediyoruz
-import TrainerCard from '../component/TrainerCard';  // 'Components' dosyasından TrainerCard'ı import ediyoruz
+import { Link } from 'react-router-dom';
+import TrainerCard from '../component/TrainerCard';
 import './Team.css';
 
 const trainers = [
@@ -28,7 +28,7 @@ const trainers = [
 const Team = () => {
     return (
         <div className="team-container">
-            <h2>Ekibimiz</h2>
+            <h2>EKİBİMİZ</h2>
             {/* Hesabım sayfasına yönlendiren bir bağlantı ekliyoruz */}
             <div className="account-link">
                 <Link to="/account">
