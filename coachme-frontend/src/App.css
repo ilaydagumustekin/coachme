@@ -22,13 +22,16 @@ body {
   border-left: none;
   border-right: none;
   backdrop-filter: blur(4px); /* Opsiyonel: arka plan hafif bulanık görünür */
+  height: 100px; /* Topbar yüksekliğini sabitle */
 }
 
-/* Logo alanı */
+/* Logo alanı (logo boyutunu büyüt) */
 .logo-img {
-  height: 80px;
+  height: 150px; /* Logonun boyutunu biraz daha büyük yapmak için ayarladık */
   width: auto;
   filter: drop-shadow(6px 2px 5px rgba(0, 0, 0, 0.5));
+  margin-top: 5px; /* Üstten biraz boşluk ekleyin */
+  margin-bottom: 5px; /* Alt taraftan da boşluk ekleyin */
 }
 
 /* Navbar */
@@ -51,7 +54,6 @@ body {
   border: none;
   outline: none;
   color: #000;
-
 }
 
 .navbar li a:hover {
