@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const AddTrainerPages = () => {
     const [formData, setFormData] = useState({
@@ -26,22 +28,23 @@ const AddTrainerPages = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Yeni Eğitmen Bilgileri:", formData);
-
-        // Form gönderildikten sonra Eğitmen Listesi sayfasına yönlendir
         navigate('/admin/trainer-list');
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
-            <h1 className="text-3xl font-bold mb-8">Eğitmen Ekle</h1>
-            <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-8 rounded-lg shadow">
+        <div className="add-trainer-wrapper">
+            <h1 className="text-3xl font-bold text-white mb-8">EĞİTMEN EKLE</h1>
+            <form
+                onSubmit={handleSubmit}
+                className="add-trainer-form"
+            >
                 <input
                     type="text"
                     name="firstName"
                     placeholder="Eğitmen Adı"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 />
                 <input
@@ -50,7 +53,7 @@ const AddTrainerPages = () => {
                     placeholder="Eğitmen Soyadı"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 />
                 <input
@@ -59,7 +62,7 @@ const AddTrainerPages = () => {
                     placeholder="E-posta Adresi"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 />
                 <input
@@ -68,14 +71,14 @@ const AddTrainerPages = () => {
                     placeholder="Telefon Numarası"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 />
                 <select
                     name="specialty"
                     value={formData.specialty}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 >
                     <option value="">Uzmanlık Alanı Seç</option>
@@ -90,7 +93,7 @@ const AddTrainerPages = () => {
                     placeholder="Tecrübe Yılı"
                     value={formData.experience}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     min="0"
                     required
                 />
@@ -98,7 +101,7 @@ const AddTrainerPages = () => {
                     name="gender"
                     value={formData.gender}
                     onChange={handleChange}
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 >
                     <option value="">Cinsiyet Seç</option>
@@ -106,20 +109,19 @@ const AddTrainerPages = () => {
                     <option value="Erkek">Erkek</option>
                     <option value="Diğer">Diğer</option>
                 </select>
-
                 <textarea
                     name="bio"
                     placeholder="Biyografi (kısa açıklama)"
                     value={formData.bio}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full mb-4 p-3 border rounded-lg"
+                    className="w-full p-3 border rounded-lg mb-3"
                     required
                 ></textarea>
 
                 <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg"
+                    className="w-full bg-red-600 text-white py-3 rounded-xl shadow hover:bg-red-700 transition"
                 >
                     Eğitmeni Kaydet
                 </button>
