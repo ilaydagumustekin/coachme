@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './AdminDashboard.css';
+import './AddTrainerPages.css';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -7,11 +9,8 @@ const Register = () => {
   const [error, setError] = useState('');
   const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')) || []);
 
-  // Kullanıcıyı kaydetme
   const handleRegister = (e) => {
     e.preventDefault();
-
-    // Kullanıcı zaten var mı kontrol et
     const userExists = users.some(user => user.email === email);
 
     if (userExists) {
@@ -19,15 +18,11 @@ const Register = () => {
       return;
     }
 
-    // Yeni kullanıcıyı oluştur ve localStorage'a kaydet
-    const newUser = {
-      email,
-      password,
-      phone
-    };
+    const newUser = { email, password, phone };
 
-    setUsers([...users, newUser]);
-    localStorage.setItem('users', JSON.stringify([...users, newUser]));
+    const updatedUsers = [...users, newUser];
+    setUsers(updatedUsers);
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
 
     setEmail('');
     setPassword('');
@@ -37,43 +32,64 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Kayıt Ol</h2>
-      <form onSubmit={handleRegister}>
-        <div className="form-group">
-          <label htmlFor="email">E-posta:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Şifre:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Telefon Numarası:</label>
-          <input
-            type="text"
-            id="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
-        </div>
-        {error && <p className="error">{error}</p>}
-        <button type="submit">Kayıt Ol</button>
-      </form>
-    </div>
+      <div className="add-trainer-wrapper">
+        <h1 className="text-3xl font-bold text-white mb-8">KAYIT OL</h1>
+        <form onSubmit={handleRegister} className="add-trainer-form">
+          <div className="mb-6">
+            <label htmlFor="email" className="block text-lg font-medium mb-2 text-white">
+              E-posta
+            </label>
+            <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full p-3 border rounded-lg mb-3"
+                placeholder="E-posta adresi girin"
+                required
+            />
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="password" className="block text-lg font-medium mb-2 text-white">
+              Şifre
+            </label>
+            <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full p-3 border rounded-lg mb-3"
+                placeholder="Şifre girin"
+                required
+            />
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="phone" className="block text-lg font-medium mb-2 text-white">
+              Telefon Numarası
+            </label>
+            <input
+                id="phone"
+                type="text"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full p-3 border rounded-lg mb-3"
+                placeholder="Telefon numarası girin"
+                required
+            />
+          </div>
+
+          {error && <p className="text-red-500 font-medium mb-4">{error}</p>}
+
+          <button
+              type="submit"
+              className="w-full bg-green-600 text-white py-3 rounded-xl shadow hover:bg-green-700 transition"
+          >
+            Kayıt Ol
+          </button>
+        </form>
+      </div>
   );
 };
 
