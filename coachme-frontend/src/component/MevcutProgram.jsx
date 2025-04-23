@@ -1,15 +1,10 @@
-// component/MevcutProgram.js
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const MevcutProgram = () => {
-    const [program, setProgram] = useState(null);
-
-    useEffect(() => {
-        // Burada API'den veya context'ten program verisini alabilirsiniz.
-        // Şu an için statik bir program verisi kullanıyoruz.
-        const fetchedProgram = {
+    const programlar = [
+        {
             name: "Haftalık Fitness Programı",
-            description: "Bu program, genel vücut sağlığını iyileştirmek için tasarlanmıştır. Ağırlık kaldırma, kardiyo ve esneme egzersizleri içerir.",
+            description: "Genel vücut sağlığını iyileştirmek için tasarlanmış bir program.",
             exercises: [
                 { day: "Pazartesi", exercise: "Squat - 3 set x 12 tekrar" },
                 { day: "Salı", exercise: "Koşu - 30 dakika" },
@@ -19,27 +14,60 @@ const MevcutProgram = () => {
                 { day: "Cumartesi", exercise: "Yoga - 60 dakika" },
                 { day: "Pazar", exercise: "Dinlenme" }
             ]
-        };
+        },
+        {
+            name: "Kardiyo Odaklı Program",
+            description: "Kardiyo dayanıklılığını artırmak için düzenlenmiştir.",
+            exercises: [
+                { day: "Pazartesi", exercise: "Koşu - 45 dakika" },
+                { day: "Salı", exercise: "Jumping Jack - 3 set x 50 tekrar" },
+                { day: "Çarşamba", exercise: "İp Atlama - 20 dakika" },
+                { day: "Perşembe", exercise: "Burpee - 3 set x 15 tekrar" },
+                { day: "Cuma", exercise: "Bisiklet - 60 dakika" },
+                { day: "Cumartesi", exercise: "Yüzme - 30 dakika" },
+                { day: "Pazar", exercise: "Dinlenme" }
+            ]
+        },
+        {
+            name: "Esneme ve Mobilite Programı",
+            description: "Kas esnekliğini ve eklem mobilitesini artırmak için uygundur.",
+            exercises: [
+                { day: "Pazartesi", exercise: "Yoga - 30 dakika" },
+                { day: "Salı", exercise: "Pilates - 45 dakika" },
+                { day: "Çarşamba", exercise: "Stretching - 20 dakika" },
+                { day: "Perşembe", exercise: "Yoga - 60 dakika" },
+                { day: "Cuma", exercise: "Foam Rolling - 15 dakika" },
+                { day: "Cumartesi", exercise: "Hafif Yürüyüş - 30 dakika" },
+                { day: "Pazar", exercise: "Dinlenme" }
+            ]
+        }
+    ];
 
-        setProgram(fetchedProgram);
-    }, []);
+    const [program, setProgram] = useState(null);
 
-    if (!program) {
-        return <div>Program yükleniyor...</div>;
-    }
+    const rastgeleProgramGetir = () => {
+        const rastgeleIndex = Math.floor(Math.random() * programlar.length);
+        setProgram(programlar[rastgeleIndex]);
+    };
 
     return (
         <div>
-            <h2>{program.name}</h2>
-            <p>{program.description}</p>
-            <h3>Program Detayları:</h3>
-            <ul>
-                {program.exercises.map((exercise, index) => (
-                    <li key={index}>
-                        <strong>{exercise.day}: </strong>{exercise.exercise}
-                    </li>
-                ))}
-            </ul>
+            <button onClick={rastgeleProgramGetir}>Rastgele Program Göster</button>
+
+            {program && (
+                <div style={{ marginTop: '20px' }}>
+                    <h2>{program.name}</h2>
+                    <p>{program.description}</p>
+                    <h3>Program Detayları:</h3>
+                    <ul>
+                        {program.exercises.map((exercise, index) => (
+                            <li key={index}>
+                                <strong>{exercise.day}: </strong>{exercise.exercise}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };

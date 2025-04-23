@@ -38,8 +38,11 @@ const App = () => {
               {/* Üstte sabit bar */}
               <div className="topbar">
                 <div className="logo">
-                  <img src="/logo.png" alt="CoachMe Logo" className="logo-img" />
+                  <Link to="/">
+                    <img src="/logo.png" alt="CoachMe Logo" className="logo-img" />
+                  </Link>
                 </div>
+
 
                 <nav className="navbar">
                   <ul>
