@@ -10,10 +10,10 @@ const AccountPage = () => {
             <nav>
                 <ul className="account-links">
                     <li>
-                        <Link to="/current-program">Mevcut Programım</Link>
+                        <Link to="/mevcut-program">Mevcut Program</Link>
                     </li>
                     <li>
-                        <Link to="/change-program">Programı Değiştir</Link>
+                        <Link to="/program-degistir">Programı Değiştir</Link>
                     </li>
                     <li>
                         <Link to="/medical-history">Hastalık Geçmişi</Link>

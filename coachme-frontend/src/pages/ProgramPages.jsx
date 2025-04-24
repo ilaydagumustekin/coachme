@@ -53,6 +53,7 @@ const ProgramPage = ({
             ) : (
                 <div>
                     <h2>Henüz bir programa katılmadınız</h2>
+                    <ProgramList onJoinProgram={onJoinProgram} />
                 </div>
             )}
 

@@ -3,30 +3,39 @@ import React, { createContext, useContext, useState } from 'react';
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  // Başlangıçta varsayılan bir kullanıcı nesnesi oluşturuyoruz (giriş yapmamış ama form çalışabilir)
+  const [user, setUser] = useState({
+    username: 'Misafir',
+    isTrainer: false,
+    isAdmin: false,
+    bmi: null
+  });
 
-  // Kullanıcıyı giriş yaptığında ayarlama
   const login = (username, isTrainerStatus = false, isAdminStatus = false) => {
     setUser({ username, isTrainer: isTrainerStatus, isAdmin: isAdminStatus });
   };
 
-  // Kullanıcıyı çıkış yaptıktan sonra sıfırlama
   const logout = () => {
-    setUser(null);
+    // Girişten çıkınca tekrar Misafir moduna döndür
+    setUser({
+      username: 'Misafir',
+      isTrainer: false,
+      isAdmin: false,
+      bmi: null
+    });
   };
 
-  // Kullanıcı verisini güncelleme fonksiyonu
   const updateUserData = (data) => {
     setUser((prevUser) => ({
       ...prevUser,
-      ...data,  // Yeni verilerle mevcut kullanıcıyı güncelliyoruz
+      ...data,
     }));
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateUserData }}>
-      {children}
-    </AuthContext.Provider>
+      <AuthContext.Provider value={{ user, login, logout, updateUserData }}>
+        {children}
+      </AuthContext.Provider>
   );
 };
 

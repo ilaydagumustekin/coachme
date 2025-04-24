@@ -1,13 +1,4 @@
-/* Genel sayfa stili */
-body {
-  background-color: transparent;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  height: 100%;
-}
-
-
-/* Üst bar alanı */
+/* Topbar */
 .topbar {
   position: fixed;
   top: 0;
@@ -26,22 +17,22 @@ body {
   height: 100px; /* Topbar yüksekliğini sabitle */
 }
 
-/* Logo alanı (logo boyutunu büyüt) */
+/* Logo */
 .logo-img {
-  height: 150px; /* Logonun boyutunu biraz daha büyük yapmak için ayarladık */
+  height: 150px;
   width: auto;
   filter: drop-shadow(6px 2px 5px rgba(0, 0, 0, 0.5));
-  margin-top: 5px; /* Üstten biraz boşluk ekleyin */
-  margin-bottom: 5px; /* Alt taraftan da boşluk ekleyin */
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Navbar */
 .navbar ul {
   display: flex;
+  gap: 15px;
   list-style: none;
-  gap: 20px;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .navbar li a {
@@ -50,7 +41,7 @@ body {
   font-weight: bold;
   padding: 7px 18px;
   border-radius: 5px;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
   background: none;
   border: none;
   outline: none;
@@ -59,4 +50,19 @@ body {
 
 .navbar li a:hover {
   background-color: #e0e0e0;
+}
+
+/* Navbar butonları */
+.navbar button {
+  background-color: #e53935; /* kırmızı */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar button:hover {
+  background-color: #b71c1c; /* daha koyu kırmızı */
 }

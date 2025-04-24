@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 
+
+
 import Team from './pages/Team';
 import TrainerProfile from './pages/TrainerProfile';
 import Cart from './pages/Cart';
@@ -16,7 +18,7 @@ import MedicalHistoryPage from './pages/MedicalHistoryPage';
 import Register from './pages/Register';
 import BMIPage from './pages/BMIPage';
 import JoinTeam from './pages/JoinTeam';
-import MevcutProgram from './component/MevcutProgram';
+import CurrentProgramPage from './pages/CurrentProgramPage';
 import BodyPage from './pages/BodyPage';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
@@ -28,6 +30,10 @@ import UpdatePricePage from './pages/UpdatePricePage';
 import UploadProgram from './pages/UploadProgram';
 import DeleteProgramPage from './pages/DeleteProgramPage';
 import UpdateProgramPage from './pages/UpdateProgramPage';
+import ProgramChangePage from './pages/ProgramChangePage';
+
+
+
 
 const App = () => {
   return (
@@ -66,11 +72,13 @@ const App = () => {
                   <Route path="/medical-history" element={<MedicalHistoryPage />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/logout" element={<Logout />} />
-                  <Route path="/mevcut-program" element={<MevcutProgram />} />
+                  <Route path="/mevcut-program" element={<CurrentProgramPage />} />
                   <Route path="/body-measurements" element={<BodyPage />} />
                   <Route path="/register" element={<Register />} />
                   <Route path="/bmi" element={<BMIPage />} />
                   <Route path="/join-team" element={<JoinTeam />} />
+                  <Route path="/program-degistir" element={<ProgramChangePage />} />
+
 
                   {/* Yönetici Paneli ve Admin Sayfaları */}
                   <Route path="/admin" element={<AdminDashboard />} />

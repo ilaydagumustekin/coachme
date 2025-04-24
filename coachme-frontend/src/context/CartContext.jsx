@@ -9,16 +9,16 @@ export const CartProvider = ({ children }) => {
   const addToCart = (trainer) => setCart((prevCart) => [...prevCart, trainer]);
 
   // Sepetten eğitmen silme
-  const removeFromCart = (trainerId) => 
-    setCart((prevCart) => prevCart.filter(item => item.id !== trainerId));
+  const removeFromCart = (trainerId) =>
+      setCart((prevCart) => prevCart.filter(item => item.id !== trainerId));
 
   // Sepeti tamamen temizleme (ödeme sonrası vs.)
   const clearCart = () => setCart([]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
-      {children}
-    </CartContext.Provider>
+      <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+        {children}
+      </CartContext.Provider>
   );
 };
 

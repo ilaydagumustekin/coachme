@@ -15,6 +15,20 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #fff; /* Metin rengi beyaz olarak ayarlandı */
+    border-radius: 12px; /* Kenarları yuvarlamak için */
+}
+
+/* Başlık */
+.account-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Alt yazı */
+.account-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 /* Linklerin listesi */
@@ -33,6 +47,7 @@ body {
     transition: background-color 0.3s;
 }
 
+/* Link stilini özelleştirme */
 .account-links li a {
     text-decoration: none;
     color: #000;
@@ -41,6 +56,12 @@ body {
     width: 100%;
 }
 
+/* Link hover efekti */
 .account-links li:hover {
     background-color: #eaeaea;
+}
+
+/* Link hover metin rengi */
+.account-links li a:hover {
+    color: #333;
 }
