@@ -1,36 +1,40 @@
-**1.Giriş Yapma:** Kullanıcıların hizmetlere erişmek için onlardan istenen kimlik doğrulama sürecidir. 
-Bu gereksinim, kullanıcının hesabına yalnızca yetkili kullanıcıların erişmesini sağlamak için kullanılır 
-ve aynı zamanda kişisel verilerin güvenliği açısından da önemlidir. Giriş yapma gereksinimi, 
-genellikle bir kullanıcı adı ve şifre kombinasyonu veya başka bir kimlik doğrulama yöntemi ile 
-gerçekleştirilir.
+**1. Giriş Yapma:**
+Kullanıcıların hizmetlere erişebilmesi için kimlik doğrulama sürecidir. Bu işlem, yalnızca yetkili kullanıcıların hesaplarına güvenli bir şekilde giriş yapmasını sağlar ve kişisel verilerin korunması açısından önemlidir. Giriş yapma işlemi, genellikle kullanıcı adı ve şifre bilgileri veya diğer kimlik doğrulama yöntemleri ile gerçekleştirilir.
 
-**2.Üye Olma:** Kullanıcıların yeni hesaplar oluşturarak hizmetin tüm özelliklerine erişmelerini ve etkileşimde 
-bulunmalarını sağlar. Kullanıcıların kişisel bilgilerinin toplanmasını ve hesap doğrulama işlemlerinin 
-yapılmasını içerir. Kullanıcılar genellikle bir kullanıcı adı ve şifre kombinasyonu belirleyerek 
-hesaplarını oluştururlar. Bu işlevselliğin kullanımı, kullanıcıların kişiselleştirilmiş bir deneyim 
-yaşamalarına ve hizmetin kullanımını kolaylaştırmalarına olanak tanır.
+**2. Ekibimiz:**
+Platformda görev yapan eğitmenlerin ve uzmanların bilgilerini kullanıcılarla paylaşma bölümüdür. Kullanıcılar, eğitmenlerin uzmanlık alanlarını, deneyimlerini ve iletişim bilgilerini görüntüleyebilirler. Bu özellik, kullanıcıların kendilerine en uygun eğitmeni seçmelerine yardımcı olur.
 
+**3. Program:**
+Kullanıcıların seçebileceği sağlık ve kondisyon programlarını listeleyen bölümdür. Farklı seviyelerde (başlangıç, orta, ileri) sunulan programlar sayesinde kullanıcılar, hedeflerine uygun antrenman ve beslenme planlarını inceleyebilir ve seçebilirler.
+
+**4. Program Güncelleme:**
+Kullanıcıların mevcut spor veya beslenme programlarını değiştirebilmesine olanak tanıyan işlemdir. Kullanıcılar, ilerlemelerine ve değişen hedeflerine göre yeni bir program seçebilir veya mevcut program üzerinde güncellemeler yapabilirler.
+
+**5. Çıkış Yap:**
+Kullanıcıların sistemden güvenli bir şekilde oturumlarını kapatmalarını sağlayan işlemdir. Bu adım, kişisel verilerin korunması ve başkalarının kullanıcı hesabına erişimini önlemek için önemlidir.
+
+**6. Beden Ölçüsü:**
+Kullanıcıların vücut ölçülerini sisteme kaydederek daha kişiselleştirilmiş programlar oluşturmalarına olanak tanır. Göğüs, bel, kalça ve diğer temel ölçülerin takip edilmesi sayesinde fiziksel gelişimler izlenebilir ve programlar buna göre güncellenebilir.
+
+**7. Eğitmen Ekle:**
+Yönetici yetkisine sahip kullanıcıların sisteme yeni eğitmenler eklemelerini sağlayan işlemdir. Eğitmen bilgileri girilerek, kullanıcıların erişebileceği yeni uzmanlar sisteme dahil edilir.
+
+**8. Eğitmen Sil:**
+Yönetici yetkisine sahip kullanıcıların mevcut eğitmenleri sistemden kaldırmalarını sağlayan işlemdir. Bu işlem, eğitmen değişikliklerinin veya güncellemelerinin sistemde düzenli şekilde yürütülmesine yardımcı olur.
+
+**9. Fiyat Güncelle:**
+Platformda sunulan hizmetlerin veya ürünlerin fiyatlarını değiştirme işlemidir. Yönetici yetkisiyle yapılan bu güncellemeler, kullanıcılara doğru ve güncel fiyat bilgisi sunulmasını sağlar.
+
+**10. Program Yükle:**
+Yeni spor veya beslenme programlarının sisteme eklenmesini sağlayan işlemdir. Bu sayede kullanıcılar daha fazla program seçeneğine erişebilir ve kişisel hedeflerine uygun yeni programları seçebilirler.
+
+**11. Program Sil:**
+Sistemde mevcut olan bir programın kaldırılmasını sağlayan işlemdir. Artık kullanılmayan veya güncelliğini yitirmiş programlar sistemden silinerek, kullanıcıların güncel ve geçerli programlara yönlendirilmesi sağlanır.
+
+**12. Program Güncelle:**
+Mevcut bir programın içeriğinde değişiklik yapılmasını sağlayan işlemdir. Programın antrenman düzeni, içerikleri veya hedef kitleye uygunluğu güncellenerek daha etkili sonuçlar alınması hedeflenir.
 **3.Beden Ölçüsü:** Kullanıcıların vücut ölçülerini girerek sağlık ve fitness hedeflerine yönelik daha 
 kişiselleştirilmiş programlar oluşturmasını sağlar. Bu gereksinim, kullanıcının göğüs, bel, kalça 
 ve basen ölçülerini sisteme ekleyerek ilerlemelerini takip etmesine olanak tanır. Beden ölçülerinin
 güncellenebilmesi, kullanıcıların fiziksel değişimlerini izlemelerini ve antrenman veya beslenme
 programlarını buna göre uyarlamalarını sağlar.
-
-**4.Spor Program Seçimi:** Kullanıcının, sağlık ve fitness hedeflerine uygun bir antrenman programı 
-belirleyerek düzenli spor yapmasını sağlar. Bu gereksinim, farklı seviyelerde 
-(başlangıç, orta, ileri) antrenman seçenekleri sunarak, kullanıcının ihtiyaçlarına en uygun 
-programı seçmesini kolaylaştırır. Spor programı zamanla değiştirilebilir veya güncellenebilir, 
-böylece kullanıcı gelişimine göre yeni hedefler belirleyebilir.
-
-**5.Ürün Sepete Ekleme:** Kullanıcıların satın almak istedikleri ürünleri belirleyerek alışveriş 
-sürecini kolaylaştıran bir işlevdir. Kullanıcı, beğendiği ürünleri sepete ekleyerek tek bir 
-işlemde birden fazla ürünü görüntüleyebilir ve satın alma işlemi öncesinde kararlarını gözden 
-geçirebilir. Sepet içeriği güncellenebilir, ürünler eklenip çıkarılabilir ve ödeme aşamasına 
-geçmeden önce sipariş detayları kontrol edilebilir.
-
-**6.Sipariş Ver:** Kullanıcının sepete eklediği ürünleri satın almasını sağlayan işlemdir. 
-Sipariş verme süreci, kullanıcıdan teslimat adresi, ödeme yöntemi ve sipariş onayı gibi bilgileri 
-alarak tamamlanır. Kullanıcı, siparişin durumunu takip edebilir ve gerektiğinde iptal veya iade 
-işlemi gerçekleştirebilir. Bu gereksinim, alışveriş sürecinin güvenli ve kesintisiz bir şekilde 
-tamamlanmasını sağlar.
-
