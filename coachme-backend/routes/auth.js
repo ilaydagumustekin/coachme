@@ -1,5 +1,6 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 import User from '../models/user.js';
 
 const router = express.Router();
@@ -7,7 +8,7 @@ const router = express.Router();
 // KAYIT OL
 router.post('/register', async (req, res) => {
   try {
-    const { email, password, phone } = req.body;
+    const { email, password, phone, height, weight, bmi, role } = req.body;
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -20,14 +21,73 @@ router.post('/register', async (req, res) => {
       email,
       password: hashedPassword,
       phone,
+      height,
+      weight,
+      bmi,
+      role: role || 'user' // 👈 Varsayılan rol kullanıcı
     });
 
     await newUser.save();
 
-    res.status(201).json({ message: 'Kayıt başarıyla tamamlandı!' });
+    const token = jwt.sign(
+      { id: newUser._id, role: newUser.role },
+      process.env.JWT_SECRET || 'supersecretkey123',
+      { expiresIn: '1d' }
+    );
+
+    res.status(201).json({
+      message: 'Kayıt başarıyla tamamlandı!',
+      token,
+      user: {
+        id: newUser._id,
+        email: newUser.email,
+        role: newUser.role
+      }
+    });
   } catch (error) {
     console.error('Kayıt Hatası:', error);
     res.status(500).json({ message: 'Kayıt sırasında bir hata oluştu.' });
+  }
+});
+
+// GİRİŞ YAP
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password, isAdmin } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: 'Kullanıcı bulunamadı!' });
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Şifre hatalı!' });
+    }
+
+    // 👇 Admin girişi istendiyse, rol kontrolü yap
+    if (isAdmin && user.role !== 'admin') {
+      return res.status(403).json({ message: 'Bu kullanıcı yönetici değil!' });
+    }
+
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.JWT_SECRET || 'supersecretkey123',
+      { expiresIn: '1d' }
+    );
+
+    res.status(200).json({
+      message: 'Giriş başarılı!',
+      token,
+      user: {
+        id: user._id,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (error) {
+    console.error('Giriş Hatası:', error);
+    res.status(500).json({ message: 'Giriş sırasında bir hata oluştu.' });
   }
 });
 
@@ -35,12 +95,6 @@ router.post('/register', async (req, res) => {
 router.put('/update-bmi/:email', async (req, res) => {
   const { height, weight, bmi } = req.body;
   const { email } = req.params;
-
-  console.log('--- BMI GÜNCELLEME ---');
-  console.log('Email:', email);
-  console.log('Boy:', height);
-  console.log('Kilo:', weight);
-  console.log('BMI:', bmi);
 
   try {
     const updatedUser = await User.findOneAndUpdate(
