@@ -1,23 +1,22 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ProgramEklemePage = () => {
-  const [programName, setProgramName] = useState('');
-  const [programDetails, setProgramDetails] = useState('');
+  const [programName, setProgramName] = useState("");
+  const [programDetails, setProgramDetails] = useState("");
 
   const handleProgramSubmit = () => {
     // Program verilerini burada backend'e kaydedebilirsiniz
-    console.log('Program adı:', programName);
-    console.log('Program detayları:', programDetails);
-    alert('Program başarıyla eklendi!');
-    setProgramName('');
-    setProgramDetails('');
+    console.log("Program adı:", programName);
+    console.log("Program detayları:", programDetails);
+    alert("Program başarıyla eklendi!");
+    setProgramName("");
+    setProgramDetails("");
   };
 
   return (
     <div>
       <h2>Yeni Program Ekle</h2>
-      <form onSubmit={e => e.preventDefault()}>
+      <form onSubmit={(e) => e.preventDefault()}>
         <div>
           <label>Program Adı:</label>
           <input
