@@ -18,4 +18,4 @@ PROJE EKİBİ: İlayda Gümüştekin, Başak Karataş
 [3.Durum Senaryoları](https://github.com/ilaydagumustekin/coachme/blob/main/Durum-Senaryolar%C4%B1.md)<br>
 [4.Front-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-frontend/src)<br>
 [5.Back-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-backend)<br>
-6.Video Sunum
+[6.Video Sunum](https://youtu.be/18-fyG14nuc)<br>
