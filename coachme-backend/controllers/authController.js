@@ -29,43 +29,71 @@ async function sendToQueue(message) {
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
-  // 1. Redis’ten kullanıcı kontrolü
-  const cached = await redis.get(`user:${email}`);
-  if (cached) {
-    res.status(409);
-    throw new Error("Bu e-posta adresi daha önce kullanılmış (cache).");
-  }
-
-  // 2. MongoDB'de kontrol
+  // 1. MongoDB'de e-posta kontrolü
   const userExists = await User.findOne({ email });
   if (userExists) {
-    // Cache'e yazmayı da unutma
-    await redis.set(`user:${email}`, "1", "EX", 3600);
     res.status(400);
     throw new Error("Bu e-posta adresi ile kayıtlı bir kullanıcı zaten var.");
   }
 
-  // 3. Kullanıcı oluştur
+  // 2. Kullanıcı oluştur
   const user = await User.create({ name, email, password });
 
   if (user) {
-    // Redis'e e-posta cache olarak ekleniyor
-    await redis.set(`user:${email}`, "1", "EX", 3600); // 1 saat geçerli
-
-    // RabbitMQ mesajı
-    await sendToQueue(`Yeni kullanıcı eklendi: ${user.name}`);
-
     res.status(201).json({
       _id: user._id,
       name: user.name,
       email: user.email,
-      token: generateToken(user._id, user.isAdmin, user.isTrainer),
+      token: generateToken(user._1, user.isAdmin, user.isTrainer),
     });
   } else {
     res.status(400);
     throw new Error("Geçersiz kullanıcı verisi.");
   }
 });
+
+
+
+// const registerUser = asyncHandler(async (req, res) => {
+//   const { name, email, password } = req.body;
+
+//   // 1. Redis’ten kullanıcı kontrolü
+//   const cached = await redis.get(`user:${email}`);
+//   if (cached) {
+//     res.status(409);
+//     throw new Error("Bu e-posta adresi daha önce kullanılmış (cache).");
+//   }
+
+//   // 2. MongoDB'de kontrol
+//   const userExists = await User.findOne({ email });
+//   if (userExists) {
+//     // Cache'e yazmayı da unutma
+//     await redis.set(`user:${email}`, "1", "EX", 3600);
+//     res.status(400);
+//     throw new Error("Bu e-posta adresi ile kayıtlı bir kullanıcı zaten var.");
+//   }
+
+//   // 3. Kullanıcı oluştur
+//   const user = await User.create({ name, email, password });
+
+//   if (user) {
+//     // Redis'e e-posta cache olarak ekleniyor
+//     await redis.set(`user:${email}`, "1", "EX", 3600); // 1 saat geçerli
+
+//     // RabbitMQ mesajı
+//     await sendToQueue(`Yeni kullanıcı eklendi: ${user.name}`);
+
+//     res.status(201).json({
+//       _id: user._id,
+//       name: user.name,
+//       email: user.email,
+//       token: generateToken(user._id, user.isAdmin, user.isTrainer),
+//     });
+//   } else {
+//     res.status(400);
+//     throw new Error("Geçersiz kullanıcı verisi.");
+//   }
+// });
 
 // @desc    Kullanıcı girişi ve token alma
 // @route   POST /api/auth/login
