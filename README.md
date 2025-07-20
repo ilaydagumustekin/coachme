@@ -19,3 +19,4 @@ PROJE EKİBİ: İlayda Gümüştekin, Başak Karataş
 [4.Front-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-frontend/src)<br>
 [5.Back-End](https://github.com/ilaydagumustekin/coachme/tree/main/coachme-backend)<br>
 [6.Video Sunum](https://youtu.be/18-fyG14nuc)<br>
+[7.Video Açıklama](https://github.com/ilaydagumustekin/coachme/blob/main/video%20ac%CC%A7%C4%B1klama.pages)<br>
