@@ -1,0 +1,36 @@
+/* Sayfa arka planı */
+body {
+  background-color: #f0f0f0;;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+/* Genel başlık stili */
+h1, h2 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Sayfa içerik padding */
+div {
+  padding: 20px;
+}
+
+/* ✅ Tüm butonlar için kırmızı stil */
+button {
+  padding: 12px 20px;
+  background-color: #e53935; /* kırmızı */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c; /* koyu kırmızı */
+}

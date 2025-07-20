@@ -1,0 +1,67 @@
+/* Genel sayfa stili */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f0f0f0; /* Diğer sayfa arka plan rengi */
+}
+
+/* Account container arka plan fotoğrafı */
+.account-container {
+    margin-top: 100px; /* topbar yüksekliğine göre ayarlayabilirsin */
+    padding: 20px;
+    background-image: url('https://images.pexels.com/photos/669584/pexels-photo-669584.jpeg'); /* Fotoğraf sadece burada */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Metin rengi beyaz olarak ayarlandı */
+    border-radius: 12px; /* Kenarları yuvarlamak için */
+}
+
+/* Başlık */
+.account-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Alt yazı */
+.account-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Linklerin listesi */
+.account-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Her bir linkin arasına koyu gri çerçeve */
+.account-links li {
+    margin: 10px 0;
+    padding: 12px;
+    border: 2px solid #333; /* koyu gri çerçeve */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* Link stilini özelleştirme */
+.account-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Link hover efekti */
+.account-links li:hover {
+    background-color: #eaeaea;
+}
+
+/* Link hover metin rengi */
+.account-links li a:hover {
+    color: #333;
+}

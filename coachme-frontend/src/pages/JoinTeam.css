@@ -1,0 +1,43 @@
+
+.join-team-background {
+    background-image: url('https://images.pexels.com/photos/163351/pexels-photo-163351.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-container {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Arka planı saydam koyu */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #c0392b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #e74c3c;
+}

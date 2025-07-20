@@ -1,0 +1,29 @@
+{
+  "name": "coachme-1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PROJE TANIMI: Sağlıklı yaşam, herkesin hakkı! Ancak, doğru beslenme ve egzersiz programını bulmak çoğu zaman karmaşık ve zorlayıcı olabilir. İşte tam da bu noktada, CoachMe devreye giriyor! Bu platform, kullanıcıların vücut kitle indeksi değerlerini analiz ederek onlara en uygun beslenme ve spor programlarını sunar. Kişiye özel önerilerimizle sağlıklı yaşam yolculuğunuzu daha bilinçli ve sürdürülebilir hale getiriyoruz. Ayrıca, online bireysel koçluk desteği ile kullanıcılarımızın ihtiyaçlarına özel rehberlik sunarak, onların hedeflerine ulaşmasını sağlıyoruz. Hedefiniz ister kilo vermek, ister kas yapmak ya da sadece sağlıklı bir yaşam tarzı oluşturmak olsun, CoachMe her adımda yanınızda!",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  }
+}

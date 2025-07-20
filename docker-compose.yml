@@ -1,0 +1,39 @@
+version: "3"
+services:
+  backend:
+    build: ./coachme-backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./coachme-backend/.env
+    volumes:
+      - ./coachme-backend:/app
+    depends_on:
+      - rabbitmq
+      - redis
+    restart: always
+
+  frontend:
+    build: ./coachme-frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./coachme-frontend/.env
+    depends_on:
+      - backend
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
+
+  redis:
+    image: redis:alpine
+    container_name: coachme-redis
+    ports:
+      - "6379:6379"
+    restart: always

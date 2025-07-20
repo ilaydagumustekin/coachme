@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+
+# Docker volumes (örnek klasör adlarını kendine göre uyarlayabilirsin)
+redis-data/
+rabbitmq-data/
+mongo-data/
+
+# Optional: Vite or CRA cache
+dist/
+build/
+.cache/
+
+# IDE klasörleri
+.vscode/
+.idea/

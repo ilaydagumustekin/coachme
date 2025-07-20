@@ -1,0 +1,40 @@
+/* Arka plan fotoğrafı ve genel stil */
+.admin-container {
+    margin-top: 100px;
+    padding: 20px;
+    background-image: url('https://images.pexels.com/photos/28080/pexels-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Linklerin listesi */
+.admin-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Her bir yönetici işlemine koyu çerçeve */
+.admin-links li {
+    margin: 10px 0;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: background-color 0.3s;
+}
+
+.admin-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    display: block;
+}
+
+.admin-links li:hover {
+    background-color: #eaeaea;
+}

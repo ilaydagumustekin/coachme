@@ -1,0 +1,91 @@
+/* Sayfa genel stili */
+body {
+    background-color: #f0f0f0; /* Diğer sayfa arka plan rengi */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Login container stili */
+.login-container {
+    background-image: url('https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(249, 250, 251, 0.9); /* Arka planı şeffaf yaparak daha iyi okunabilirlik sağlar */
+    min-height: 100vh;
+}
+
+/* Başlık stili */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Login form konteyneri */
+.login-forms-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Login box stili */
+.login-box {
+    background-image: url('https://images.pexels.com/photos/260352/pexels-photo-260352.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    backdrop-filter: brightness(0.8); /* Arka planın daha kararmasını sağlar */
+    position: relative;
+}
+
+/* Login box başlık stili */
+.login-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Login box input stili */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Login box buton stili */
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+    background-color: #45a049;
+}
+
+/* Hata mesajı stili */
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
